@@ -2,6 +2,8 @@
 
 A curated collection of Nexthink Workspace IT Agents designed to extend, accelerate, and augment Digital Workplace and IT Operations teams.
 
+> 🚧 Workspace IT Agents and Tasks are based on Nexthink Technical Preview capabilities and may evolve over time.
+
 ## What are Nexthink Workspace IT Agents?
 
 Think of an IT Agent as a specialized extension of your own IT team.
