@@ -127,6 +127,78 @@ These prompts are designed to:
 
 ---
 
+## Agent Usage Modes
+
+Workspace IT Agents can be used in two complementary ways.
+
+### 1. Interactive Discussions
+
+Agents can be launched directly from the Nexthink Workspace agent menu.
+
+When opened this way:
+- a dedicated discussion is automatically created,
+- the selected IT Agent becomes the active operational context,
+- the conversation inherits the agent’s role, expertise, behaviors, and operational guidance.
+
+This mode is ideal for:
+- investigations,
+- troubleshooting,
+- exploratory analysis,
+- operational questions,
+- root cause analysis,
+- ad hoc reporting.
+
+Example:
+> "Why are Microsoft Teams crashes increasing this morning for remote users in Germany?"
+
+---
+
+### 2. Scheduled Tasks
+
+Agents can also run automatically using **Tasks** in Nexthink Workspace.
+
+Tasks allow teams to:
+- schedule recurring prompts,
+- automate operational analysis,
+- proactively monitor DEX conditions,
+- continuously surface insights without manual interaction.
+
+This mode is ideal for:
+- daily DEX reviews,
+- security posture monitoring,
+- recurring executive reporting,
+- automation governance,
+- proactive operational detection.
+
+Example:
+> "Identify the 10 most structurally unstable devices with the greatest negative impact on DEX and propose high-impact remediation opportunities."
+
+Typical schedules include:
+- hourly,
+- daily,
+- weekly,
+- interval-based,
+- one-time executions.
+
+---
+
+## Recommended Operational Model
+
+Both modes complement each other.
+
+| Usage Mode | Best For |
+|---|---|
+| Interactive Discussions | Investigations, troubleshooting, exploratory analysis |
+| Scheduled Tasks | Proactive monitoring, recurring reporting, continuous operational intelligence |
+
+Together, they enable:
+- reactive investigations,
+- proactive detection,
+- scalable AI-assisted operations,
+- continuous DEX intelligence.
+
+---
+
 # Example Prompts
 
 ## Productivity Guardian
@@ -203,6 +275,153 @@ These prompts are designed to:
 
 ## Workforce Sentiment Inference Agent
 “Detect populations silently suffering from digital friction before support tickets increase.”
+
+
+---
+
+# Tasks in Nexthink Workspace
+
+Tasks are a scheduled automation capability in **Nexthink Workspace** *(currently in Technical Preview)* that allow IT Agents to run automatically on a recurring schedule without requiring manual interaction.
+
+A Task behaves as if an operator manually launched a prompt at the scheduled moment, enabling proactive and continuous operational analysis across the digital workplace.
+
+---
+
+## How Tasks Work
+
+With Tasks, you can:
+
+1. Select an IT Agent
+2. Write a prompt or operational instruction
+3. Configure a schedule
+4. Let Nexthink Assist execute the analysis automatically
+
+Tasks can run:
+- Daily
+- Hourly
+- At recurring intervals
+- One-time only
+
+This transforms Workspace IT Agents from:
+- reactive assistants
+
+into:
+- proactive operational analysts continuously monitoring your environment.
+
+---
+
+## Typical Task Use Cases
+
+### Proactive DEX Monitoring
+
+Examples:
+- Top crashing devices
+- Worst DEX score degradations
+- Hidden employee friction
+- Collaboration instability detection
+
+---
+
+### Security & Compliance Reviews
+
+Examples:
+- Devices missing patches
+- Security posture drift
+- Compliance exceptions
+- Weak endpoint hygiene
+
+---
+
+### Automation Governance
+
+Examples:
+- Remote Action failure analysis
+- Autonomous remediation confidence scoring
+- Automation opportunity identification
+- Collection coverage optimization
+
+---
+
+### Executive & Operational Reporting
+
+Examples:
+- Weekly DEX summaries
+- Monthly value realization reports
+- Sustainability optimization reviews
+- VIP experience protection reporting
+
+---
+
+## Example Scheduled Task
+
+### Workforce Sentiment Inference Agent
+
+Example recurring task:
+
+> Identify the 10 most structurally unstable devices with the greatest negative impact on DEX, focusing on recurring and systemic degradation rather than isolated incidents. Correlate endpoint and application degradations, identify the most impactful root causes, and propose high-impact remediation recommendations prioritized by operational impact.
+
+Task configuration:
+- Schedule: Daily at 9:00 AM
+- Agent: Workforce Sentiment Inference Agent
+- Goal: Proactively surface silent digital friction before support escalation occurs
+
+This enables IT teams to automatically receive actionable operational intelligence every morning without requiring manual investigation.
+
+---
+
+## Why Tasks Are Powerful
+
+Tasks help organizations move from:
+- reactive support
+
+to:
+- proactive DEX operations.
+
+Instead of waiting for users to report issues, Tasks continuously:
+- analyze,
+- prioritize,
+- correlate,
+- and surface emerging operational risks automatically.
+
+Benefits include:
+- earlier issue detection
+- reduced operational noise
+- improved productivity
+- accelerated remediation
+- continuous operational visibility
+- scalable proactive IT operations
+
+---
+
+## Creating a Task
+
+To create a Task in Nexthink Assist:
+
+1. Open the **Tasks** view
+2. Click **+ New Task**
+3. Select an IT Agent
+4. Write your prompt or instruction
+5. Configure the schedule
+6. Save and activate the Task
+
+The Task will then execute automatically according to the configured cadence.
+
+---
+
+## Example Ideas for Scheduled Tasks
+
+| Agent | Example Scheduled Task |
+|---|---|
+| Productivity Guardian | Detect employee populations losing the most productive time every morning |
+| Major Incident Intelligence Agent | Monitor emerging major incident weak signals every 15 minutes |
+| Endpoint Security Posture Auditor | Run weekly endpoint compliance drift reviews |
+| Remote Actions Intelligence Agent | Analyze automation failures and scheduler optimization opportunities daily |
+| Green IT & Sustainability Optimization Agent | Surface unnecessary energy consumption and idle device patterns weekly |
+| VIP Experience Protection Agent | Continuously monitor executive populations for degradation risks |
+| Ticket Deflection & Self-Healing Opportunity Agent | Identify recurring incidents suitable for automation every week |
+
+---
+
 
 ---
 
