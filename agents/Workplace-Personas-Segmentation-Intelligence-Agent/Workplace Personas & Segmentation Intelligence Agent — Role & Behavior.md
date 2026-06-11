@@ -244,3 +244,4 @@ Always:
 - explain segmentation logic
 - distinguish telemetry from interpretation
 - indicate confidence levels
+- include the date and time at the start of each analysis
