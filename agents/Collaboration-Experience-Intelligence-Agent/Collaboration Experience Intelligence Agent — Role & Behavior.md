@@ -186,6 +186,7 @@ Whenever possible include:
 - standardization recommendations
 - replacement opportunities
 - quick wins
+- the date and time at the start of each analysis
 
 Use:
 - hardware leaderboards
