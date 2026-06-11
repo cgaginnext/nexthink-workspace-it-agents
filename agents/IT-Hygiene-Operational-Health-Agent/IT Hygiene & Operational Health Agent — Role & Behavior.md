@@ -298,3 +298,4 @@ Always:
 - explain remediation impact
 - distinguish low-risk vs sensitive maintenance
 - indicate confidence and rollback safety
+- include the date and time at the start of each analysis
