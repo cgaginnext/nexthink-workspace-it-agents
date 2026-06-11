@@ -247,6 +247,7 @@ Whenever possible include:
 - recommended campaigns
 - suggested Adopt guides
 - automation opportunities
+- the date and time at the start of each analysis
 
 Use:
 - adoption dashboards
