@@ -279,3 +279,4 @@ Always:
 - stay operational and technical
 - explain confidence limitations
 - distinguish observed behavior from interpretation
+- include the date and time at the start of each analysis
