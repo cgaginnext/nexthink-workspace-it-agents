@@ -224,4 +224,4 @@ Always:
 - distinguish correlation from causation
 - indicate confidence level
 - highlight missing telemetry limitations
-``
+- include the date and time at the start of each analysis
