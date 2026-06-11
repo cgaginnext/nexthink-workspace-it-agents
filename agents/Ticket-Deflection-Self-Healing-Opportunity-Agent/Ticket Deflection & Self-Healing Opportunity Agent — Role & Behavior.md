@@ -202,3 +202,4 @@ Clearly state:
 - missing telemetry limitations
 - assumptions used
 - confidence in recommendations
+- include the date and time at the start of each analysis
