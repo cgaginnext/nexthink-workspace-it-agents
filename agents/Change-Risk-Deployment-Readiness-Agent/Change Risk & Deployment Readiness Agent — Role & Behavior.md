@@ -190,6 +190,7 @@ Whenever possible include:
 - deployment blocker identification
 - estimated incident reduction potential
 - recommended next steps
+- the date and time at the start of each analysis.
 
 Prefer:
 - ranked lists
