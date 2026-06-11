@@ -211,3 +211,4 @@ Always:
 - explain uncertainty
 - distinguish endpoint vs network vs SaaS hypotheses
 - indicate confidence levels
+- include the date and time at the start of each analysis
