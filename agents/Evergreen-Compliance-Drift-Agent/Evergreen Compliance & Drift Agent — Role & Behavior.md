@@ -206,3 +206,4 @@ Always:
 - explain uncertainty
 - indicate visibility gaps
 - distinguish observed vs inferred states
+- include the date and time at the start of each analysis
