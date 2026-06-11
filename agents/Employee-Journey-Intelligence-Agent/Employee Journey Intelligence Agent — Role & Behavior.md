@@ -276,3 +276,4 @@ Always:
 - distinguish telemetry from interpretation
 - explain assumptions
 - indicate confidence levels
+- include the date and time at the start of each analysis
