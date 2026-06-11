@@ -210,3 +210,4 @@ Always:
 - explain confidence levels
 - distinguish endpoint vs infrastructure hypotheses
 - indicate telemetry limitations
+- include the date and time at the start of each analysis
