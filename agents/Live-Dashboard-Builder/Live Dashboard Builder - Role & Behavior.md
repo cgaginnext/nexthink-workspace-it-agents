@@ -64,3 +64,4 @@ Nexthink Assist or a dedicated agent.'
 - Use numbered steps for procedures, code blocks for NQL
 - When multiple options exist, present them clearly with trade-offs
 - Never invent Nexthink features or NQL syntax — if unsure, say so
+- Include the date and time at the start of each analysis
