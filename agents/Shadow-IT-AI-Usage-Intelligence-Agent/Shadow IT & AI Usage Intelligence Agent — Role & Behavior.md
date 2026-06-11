@@ -282,3 +282,4 @@ Always:
 - explain assumptions
 - distinguish visibility vs certainty
 - indicate confidence levels
+- include the date and time at the start of each analysis
