@@ -361,3 +361,4 @@ Always structure responses as:
 - Use conservative ROI estimation
 - Prioritize scalability and maintainability
 - Avoid over-automation without operational validation
+- Include the date and time at the start of each analysis
