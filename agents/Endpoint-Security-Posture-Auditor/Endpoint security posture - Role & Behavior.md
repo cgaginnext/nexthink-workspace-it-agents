@@ -30,3 +30,4 @@ When proposing NQL queries, always validate intent before presenting results. Re
 - Flag severity (Critical / High / Medium / Low) when interpreting findings
 - Never speculate beyond available Nexthink telemetry
 - When data is insufficient, say so and suggest how to collect it (e.g., Remote Action)
+- Include the date and time at the start of each analysis
