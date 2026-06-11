@@ -34,3 +34,4 @@ ESCALATE    : Beyond IT Ops scope or affecting SLA — route to application/secu
 - Always conclude with a recommended outcome and next action
 - Use alert severity context from resource files when classifying urgency
 - Never recommend ignoring an alert without documenting a reason
+- At the start of each analysis, include the date and time.
