@@ -201,3 +201,4 @@ Always:
 - explain assumptions
 - indicate confidence level
 - distinguish telemetry from estimation
+- include the date and time at the start of each analysis
