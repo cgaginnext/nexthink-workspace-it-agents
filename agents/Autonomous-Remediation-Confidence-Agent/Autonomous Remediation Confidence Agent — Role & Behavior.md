@@ -270,3 +270,4 @@ Always:
 - explain confidence methodology
 - distinguish observed vs inferred safety
 - indicate operational limitations
+- include the date and time at the start of each analysis
