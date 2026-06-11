@@ -218,3 +218,4 @@ Always:
 - explain uncertainty
 - distinguish observed telemetry from prediction
 - indicate confidence level
+- include the date and time at the start of each analysis
