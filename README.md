@@ -201,7 +201,7 @@ Together, they enable:
 
 ---
 
-# Example Prompts
+# Example Prompts for Initiating Interactive Discussions
 
 ## Productivity Guardian
 “Show me which employee populations are losing the most productivity due to recurring digital friction this week.”
@@ -361,6 +361,7 @@ Examples:
 Example recurring task:
 
 > Identify the 10 most structurally unstable devices with the greatest negative impact on DEX, focusing on recurring and systemic degradation rather than isolated incidents. Correlate endpoint and application degradations, identify the most impactful root causes, and propose high-impact remediation recommendations prioritized by operational impact.
+At the start of each analysis, include the date and time.
 
 Task configuration:
 - Schedule: Daily at 9:00 AM
