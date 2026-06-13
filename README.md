@@ -61,63 +61,62 @@ https://docs.nexthink.com/platform/technical-previews/workspace-it-agents
 # Available Agents
 
 ## 🛡️ Security & Compliance
-| Agent | Interested Teams | Description |
-|---|---|---|
-| [Endpoint Security Posture Auditor](./agents/Endpoint-Security-Posture-Auditor/) | `Security` `SecOps` `Endpoint Engineering` `EUC` `Compliance` | Evaluates endpoint security posture, compliance, operational hygiene, and configuration consistency across the digital workplace estate. |
-| [Evergreen Compliance & Drift Agent](./agents/Evergreen-Compliance-Drift-Agent/) | `Endpoint Engineering` `Security` `EUC` `Compliance` `Operations` | Monitors deviations from enterprise standards across OS versions, policies, applications, and operational consistency. |
-| [Shadow IT & AI Usage Intelligence Agent](./agents/Shadow-IT-AI-Usage-Intelligence-Agent/) | `Security` `Governance` `Compliance` `DEX` | Detects unmanaged SaaS, AI platforms, extensions, and unsanctioned employee workflows. |
+| Agent | Interested Teams | Description | 💬 Example Prompt |
+|---|---|---|---|
+| [Endpoint Security Posture Auditor](./agents/Endpoint-Security-Posture-Auditor/) | `Security` `SecOps` `Endpoint Engineering` `EUC` `Compliance` | Evaluates endpoint security posture, compliance, operational hygiene, and configuration consistency across the digital workplace estate. | *"Identify devices with risky security posture drift and explain the biggest compliance gaps."* |
+| [Evergreen Compliance & Drift Agent](./agents/Evergreen-Compliance-Drift-Agent/) | `Endpoint Engineering` `Security` `EUC` `Compliance` `Operations` | Monitors deviations from enterprise standards across OS versions, policies, applications, and operational consistency. | *"Show me where endpoint configurations are drifting away from enterprise standards."* |
+| [Shadow IT & AI Usage Intelligence Agent](./agents/Shadow-IT-AI-Usage-Intelligence-Agent/) | `Security` `Governance` `Compliance` `DEX` | Detects unmanaged SaaS, AI platforms, extensions, and unsanctioned employee workflows. | *"Detect unmanaged AI tools and unsanctioned SaaS applications used by employees."* |
 
 ## 🤖 Automation & Remediation
-| Agent | Interested Teams | Description |
-|---|---|---|
-| [Remote Actions Intelligence Agent](./agents/Remote-Actions-Intelligence-Agent/) | `Automation` `Endpoint Engineering` `IT Operations` `EUC` | Analyzes Nexthink Remote Actions quality, usage, effectiveness, reliability, and automation opportunities. |
-| [Ticket Deflection & Self-Healing Opportunity Agent](./agents/Ticket-Deflection-Self-Healing-Opportunity-Agent/) | `Service Desk` `Automation` `Support` `DEX` | Detects repetitive incidents and identifies the best self-healing and automation opportunities. |
-| [Autonomous Remediation Confidence Agent](./agents/Autonomous-Remediation-Confidence-Agent/) | `Automation` `IT Operations` `Endpoint Engineering` `DEX` | Measures remediation reliability and identifies safe opportunities for autonomous self-healing operations. |
+| Agent | Interested Teams | Description | 💬 Example Prompt |
+|---|---|---|---|
+| [Remote Actions Intelligence Agent](./agents/Remote-Actions-Intelligence-Agent/) | `Automation` `Endpoint Engineering` `IT Operations` `EUC` | Analyzes Nexthink Remote Actions quality, usage, effectiveness, reliability, and automation opportunities. | *"Which Remote Actions have the highest failure rates and biggest automation potential?"* |
+| [Ticket Deflection & Self-Healing Opportunity Agent](./agents/Ticket-Deflection-Self-Healing-Opportunity-Agent/) | `Service Desk` `Automation` `Support` `DEX` | Detects repetitive incidents and identifies the best self-healing and automation opportunities. | *"Which recurring support issues could be eliminated through self-healing automation?"* |
+| [Autonomous Remediation Confidence Agent](./agents/Autonomous-Remediation-Confidence-Agent/) | `Automation` `IT Operations` `Endpoint Engineering` `DEX` | Measures remediation reliability and identifies safe opportunities for autonomous self-healing operations. | *"Which remediations are safe enough to transition into fully autonomous self-healing workflows?"* |
 
 ## 📊 IT Operations & Support
-| Agent | Interested Teams | Description |
-|---|---|---|
-| [Alert Fatigue Manager](./agents/Alert-Fatigue-Manager/) | `IT Operations` `Support` `NOC` `Service Desk` | Helps IT teams reduce operational noise and prioritize actionable alerts by analyzing ignored or low-value monitoring signals. |
-| [Major Incident Intelligence Agent](./agents/Major-Incident-Intelligence-Agent/) | `IT Operations` `NOC` `Infrastructure` `Support` | Correlates weak operational signals to detect major incidents early and assess impact severity and blast radius. |
-| [IT Hygiene & Operational Health Agent](./agents/IT-Hygiene-Operational-Health-Agent/) | `IT Operations` `Endpoint Engineering` `EUC` `Support` | Maintains operational hygiene by detecting unhealthy collectors, degraded devices, and technical debt accumulation. |
+| Agent | Interested Teams | Description | 💬 Example Prompt |
+|---|---|---|---|
+| [Alert Fatigue Manager](./agents/Alert-Fatigue-Manager/) | `IT Operations` `Support` `NOC` `Service Desk` | Helps IT teams reduce operational noise and prioritize actionable alerts by analyzing ignored or low-value monitoring signals. | *"Which operational alerts are most frequently ignored and generate the least actionable value?"* |
+| [Major Incident Intelligence Agent](./agents/Major-Incident-Intelligence-Agent/) | `IT Operations` `NOC` `Infrastructure` `Support` | Correlates weak operational signals to detect major incidents early and assess impact severity and blast radius. | *"Detect any emerging major incident patterns before large-scale user impact occurs."* |
+| [IT Hygiene & Operational Health Agent](./agents/IT-Hygiene-Operational-Health-Agent/) | `IT Operations` `Endpoint Engineering` `EUC` `Support` | Maintains operational hygiene by detecting unhealthy collectors, degraded devices, and technical debt accumulation. | *"Reveal hidden operational hygiene problems degrading long-term endpoint stability."* |
 
 ## 🚀 Change Management & Deployment
-| Agent | Interested Teams | Description |
-|---|---|---|
-| [Change Risk & Deployment Readiness Agent](./agents/Change-Risk-Deployment-Readiness-Agent/) | `EUC` `Endpoint Engineering` `Transformation` `Operations` `Workplace Engineering` | Identifies deployment risks prior to Windows, application, or security rollouts and recommends mitigation strategies. |
-| [Employee Journey Intelligence Agent](./agents/Employee-Journey-Intelligence-Agent/) | `Transformation` `Adoption` `DEX` `EUC` | Analyzes employee journeys such as onboarding, migrations, refresh cycles, and transformation initiatives. |
-| [Change Communication Intelligence Agent](./agents/Change-Communication-Intelligence-Agent/) | `Change Management` `Adoption` `DEX` `Communications` | Optimizes IT communication and Engage campaigns through behavioral analysis and adoption insights. |
+| Agent | Interested Teams | Description | 💬 Example Prompt |
+|---|---|---|---|
+| [Change Risk & Deployment Readiness Agent](./agents/Change-Risk-Deployment-Readiness-Agent/) | `EUC` `Endpoint Engineering` `Transformation` `Operations` `Workplace Engineering` | Identifies deployment risks prior to Windows, application, or security rollouts and recommends mitigation strategies. | *"Identify high-risk devices before the Windows 11 rollout and recommend exclusion populations."* |
+| [Employee Journey Intelligence Agent](./agents/Employee-Journey-Intelligence-Agent/) | `Transformation` `Adoption` `DEX` `EUC` | Analyzes employee journeys such as onboarding, migrations, refresh cycles, and transformation initiatives. | *"Analyze the employee experience during the Windows migration journey and highlight friction points."* |
+| [Change Communication Intelligence Agent](./agents/Change-Communication-Intelligence-Agent/) | `Change Management` `Adoption` `DEX` `Communications` | Optimizes IT communication and Engage campaigns through behavioral analysis and adoption insights. | *"Optimize our Engage campaigns to maximize employee adoption and reduce communication fatigue."* |
 
 ## 💻 Employee Experience & Productivity
-| Agent | Interested Teams | Description |
-|---|---|---|
-| [Productivity Guardian](./agents/Productivity-Guardian/) | `DEX` `Digital Workplace` `IT Leadership` `EUC` | Protects employee productivity by identifying digital friction, collaboration degradation, interruptions, and inefficient workflows impacting business performance. |
-| [Employee Friction Intelligence Agent](./agents/Employee-Friction-Intelligence-Agent/) | `DEX` `Digital Workplace` `Support` `EUC` | Detects hidden day-to-day digital friction such as slowness, freezes, unstable Wi‑Fi, and repeated interruptions. |
-| [VIP Experience Protection Agent](./agents/VIP-Experience-Protection-Agent/) | `Executive IT` `DEX` `Support` `Digital Workplace` | Protects executives and business-critical users by proactively identifying degradation risks before user impact escalates. |
-| [Workforce Sentiment Inference Agent](./agents/Workforce-Sentiment-Inference-Agent/) | `DEX` `HR IT` `Digital Workplace` `Support` | Detects populations impacted by silent digital friction and operational fatigue patterns before support escalation. |
+| Agent | Interested Teams | Description | 💬 Example Prompt |
+|---|---|---|---|
+| [Productivity Guardian](./agents/Productivity-Guardian/) | `DEX` `Digital Workplace` `IT Leadership` `EUC` | Protects employee productivity by identifying digital friction, collaboration degradation, interruptions, and inefficient workflows impacting business performance. | *"Show me which employee populations are losing the most productivity due to recurring digital friction this week."* |
+| [Employee Friction Intelligence Agent](./agents/Employee-Friction-Intelligence-Agent/) | `DEX` `Digital Workplace` `Support` `EUC` | Detects hidden day-to-day digital friction such as slowness, freezes, unstable Wi‑Fi, and repeated interruptions. | *"Reveal the hidden digital frustrations silently impacting employee productivity across the workplace."* |
+| [VIP Experience Protection Agent](./agents/VIP-Experience-Protection-Agent/) | `Executive IT` `DEX` `Support` `Digital Workplace` | Protects executives and business-critical users by proactively identifying degradation risks before user impact escalates. | *"Identify VIP users currently exposed to collaboration or performance degradation risks."* |
+| [Workforce Sentiment Inference Agent](./agents/Workforce-Sentiment-Inference-Agent/) | `DEX` `HR IT` `Digital Workplace` `Support` | Detects populations impacted by silent digital friction and operational fatigue patterns before support escalation. | *"Detect populations silently suffering from digital friction before support tickets increase."* |
 
 ## ☁️ Collaboration, SaaS & Cloud
-| Agent | Interested Teams | Description |
-|---|---|---|
-| [SaaS Experience Optimization Agent](./agents/SaaS-Experience-Optimization-Agent/) | `Collaboration` `DEX` `Cloud` `Digital Workplace` | Analyzes employee experience across SaaS platforms such as Microsoft 365, Teams, SAP, and Salesforce. |
-| [Windows 365 & VDI Optimization Agent](./agents/Windows-365-VDI-Optimization-Agent/) | `VDI` `Cloud` `Infrastructure` `EUC` `Workplace Engineering` | Optimizes Citrix, AVD, Horizon, and Windows 365 environments using endpoint and virtualization telemetry. |
-| [Collaboration Experience Intelligence Agent](./agents/Collaboration-Experience-Intelligence-Agent/) | `Collaboration` `Support` `DEX` `Workplace Engineering` | Monitors collaboration quality across Teams, Zoom, Webex, peripherals, drivers, and networking conditions. |
-| [Digital Adoption & Feature Usage Intelligence Agent](./agents/Digital-Adoption-Feature-Usage-Intelligence-Agent/) | `Adoption` `Change Management` `DEX` `Transformation` | Measures adoption and feature usage for Microsoft 365, Copilot, Teams, and OneDrive capabilities. |
+| Agent | Interested Teams | Description | 💬 Example Prompt |
+|---|---|---|---|
+| [SaaS Experience Optimization Agent](./agents/SaaS-Experience-Optimization-Agent/) | `Collaboration` `DEX` `Cloud` `Digital Workplace` | Analyzes employee experience across SaaS platforms such as Microsoft 365, Teams, SAP, and Salesforce. | *"Explain why Microsoft Teams performance is degraded for remote employees this morning."* |
+| [Windows 365 & VDI Optimization Agent](./agents/Windows-365-VDI-Optimization-Agent/) | `VDI` `Cloud` `Infrastructure` `EUC` `Workplace Engineering` | Optimizes Citrix, AVD, Horizon, and Windows 365 environments using endpoint and virtualization telemetry. | *"Find the root causes of latency and instability across our VDI environments."* |
+| [Collaboration Experience Intelligence Agent](./agents/Collaboration-Experience-Intelligence-Agent/) | `Collaboration` `Support` `DEX` `Workplace Engineering` | Monitors collaboration quality across Teams, Zoom, Webex, peripherals, drivers, and networking conditions. | *"Which devices, peripherals, or drivers are generating poor meeting experiences?"* |
+| [Digital Adoption & Feature Usage Intelligence Agent](./agents/Digital-Adoption-Feature-Usage-Intelligence-Agent/) | `Adoption` `Change Management` `DEX` `Transformation` | Measures adoption and feature usage for Microsoft 365, Copilot, Teams, and OneDrive capabilities. | *"Which Microsoft 365 and Copilot capabilities remain underused across the organization?"* |
 
 ## 💰 Finance, Cost & Sustainability (FinOps & Green IT)
-| Agent | Interested Teams | Description |
-|---|---|---|
-| [Value Realization Agent](./agents/Value-Realization-Agent/) | `Customer Success` `DEX` `Leadership` `Transformation` `FinOps` | Measures business value delivered by Nexthink through DEX improvements, automation gains, ROI metrics, and ticket reduction. |
-| [Green IT & Sustainability Optimization Agent](./agents/Green-IT-Sustainability-Optimization-Agent/) | `Sustainability` `FinOps` `DEX` `IT Leadership` | Identifies sustainability and Green IT optimization opportunities including energy reduction and lifecycle extension. |
-| [Workplace Cost Optimization Agent](./agents/Workplace-Cost-Optimization-Agent/) | `FinOps` `IT Leadership` `Infrastructure` `DEX` | Identifies cost optimization opportunities across hardware, licenses, VDI, dormant assets, and support operations. |
+| Agent | Interested Teams | Description | 💬 Example Prompt |
+|---|---|---|---|
+| [Value Realization Agent](./agents/Value-Realization-Agent/) | `Customer Success` `DEX` `Leadership` `Transformation` `FinOps` | Measures business value delivered by Nexthink through DEX improvements, automation gains, ROI metrics, and ticket reduction. | *"Quantify the business value generated by Nexthink automation and ticket reduction over the last quarter."* |
+| [Green IT & Sustainability Optimization Agent](./agents/Green-IT-Sustainability-Optimization-Agent/) | `Sustainability` `FinOps` `DEX` `IT Leadership` | Identifies sustainability and Green IT optimization opportunities including energy reduction and lifecycle extension. | *"Identify the biggest opportunities to reduce energy waste across employee devices."* |
+| [Workplace Cost Optimization Agent](./agents/Workplace-Cost-Optimization-Agent/) | `FinOps` `IT Leadership` `Infrastructure` `DEX` | Identifies cost optimization opportunities across hardware, licenses, VDI, dormant assets, and support operations. | *"Identify unnecessary workplace technology costs without negatively impacting employee experience."* |
 
 ## 📈 Analytics & Steering
-| Agent | Interested Teams | Description |
-|---|---|---|
-| [Live Dashboard Builder](./agents/Live-Dashboard-Builder/) | `DEX` `Operations` `Leadership` `Workplace Analytics` | Dynamically creates Nexthink dashboards and operational reporting views from natural language requests. |
-| [Workplace Personas & Segmentation Intelligence Agent](./agents/Workplace-Personas-Segmentation-Intelligence-Agent/) | `DEX` `Workplace Analytics` `Transformation` `Digital Workplace` | Builds workplace personas from employee behaviors and digital workstyles to enable intelligent personalization. |
+| Agent | Interested Teams | Description | 💬 Example Prompt |
+|---|---|---|---|
+| [Live Dashboard Builder](./agents/Live-Dashboard-Builder/) | `DEX` `Operations` `Leadership` `Workplace Analytics` | Dynamically creates Nexthink dashboards and operational reporting views from natural language requests. | *"Create an executive dashboard showing global DEX health, collaboration quality, and top operational risks."* |
+| [Workplace Personas & Segmentation Intelligence Agent](./agents/Workplace-Personas-Segmentation-Intelligence-Agent/) | `DEX` `Workplace Analytics` `Transformation` `Digital Workplace` | Builds workplace personas from employee behaviors and digital workstyles to enable intelligent personalization. | *"Build workplace personas automatically based on collaboration habits, mobility, and workstyles."* |
 
----
 ---
 # Repository Structure
 
@@ -228,86 +227,6 @@ Together, they enable:
 - proactive detection,
 - scalable AI-assisted operations,
 - continuous DEX intelligence.
-
----
-
-# Example Prompts for Initiating Interactive Discussions
-
-## Productivity Guardian
-“Show me which employee populations are losing the most productivity due to recurring digital friction this week.”
-
-## Endpoint Security Posture Auditor
-“Identify devices with risky security posture drift and explain the biggest compliance gaps.”
-
-## Alert Fatigue Manager
-“Which operational alerts are most frequently ignored and generate the least actionable value?”
-
-## Live Dashboard Builder
-“Create an executive dashboard showing global DEX health, collaboration quality, and top operational risks.”
-
-## Value Realization Agent
-“Quantify the business value generated by Nexthink automation and ticket reduction over the last quarter.”
-
-## Remote Actions Intelligence Agent
-“Which Remote Actions have the highest failure rates and biggest automation potential?”
-
-## Change Risk & Deployment Readiness Agent
-“Identify high-risk devices before the Windows 11 rollout and recommend exclusion populations.”
-
-## Ticket Deflection & Self-Healing Opportunity Agent
-“Which recurring support issues could be eliminated through self-healing automation?”
-
-## Employee Friction Intelligence Agent
-“Reveal the hidden digital frustrations silently impacting employee productivity across the workplace.”
-
-## Major Incident Intelligence Agent
-“Detect any emerging major incident patterns before large-scale user impact occurs.”
-
-## Evergreen Compliance & Drift Agent
-“Show me where endpoint configurations are drifting away from enterprise standards.”
-
-## VIP Experience Protection Agent
-“Identify VIP users currently exposed to collaboration or performance degradation risks.”
-
-## SaaS Experience Optimization Agent
-“Explain why Microsoft Teams performance is degraded for remote employees this morning.”
-
-## Windows 365 & VDI Optimization Agent
-“Find the root causes of latency and instability across our VDI environments.”
-
-## Green IT & Sustainability Optimization Agent
-“Identify the biggest opportunities to reduce energy waste across employee devices.”
-
-## Collaboration Experience Intelligence Agent
-“Which devices, peripherals, or drivers are generating poor meeting experiences?”
-
-## Digital Adoption & Feature Usage Intelligence Agent
-“Which Microsoft 365 and Copilot capabilities remain underused across the organization?”
-
-## Shadow IT & AI Usage Intelligence Agent
-“Detect unmanaged AI tools and unsanctioned SaaS applications used by employees.”
-
-## Workplace Cost Optimization Agent
-“Identify unnecessary workplace technology costs without negatively impacting employee experience.”
-
-## Workplace Personas & Segmentation Intelligence Agent
-“Build workplace personas automatically based on collaboration habits, mobility, and workstyles.”
-
-## Employee Journey Intelligence Agent
-“Analyze the employee experience during the Windows migration journey and highlight friction points.”
-
-## Autonomous Remediation Confidence Agent
-“Which remediations are safe enough to transition into fully autonomous self-healing workflows?”
-
-## IT Hygiene & Operational Health Agent
-“Reveal hidden operational hygiene problems degrading long-term endpoint stability.”
-
-## Change Communication Intelligence Agent
-“Optimize our Engage campaigns to maximize employee adoption and reduce communication fatigue.”
-
-## Workforce Sentiment Inference Agent
-“Detect populations silently suffering from digital friction before support tickets increase.”
-
 
 ---
 
