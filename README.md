@@ -13,6 +13,7 @@ Nexthink Workspace IT Agents are AI-powered operational assistants designed to h
 Each agent focuses on a dedicated operational domain and continuously helps teams:
 
 - Detect hidden digital friction
+- Reduce recurring endpoint slowness through structured diagnosis, quick wins, and continuous device hygiene improvement
 - Reduce operational noise
 - Improve employee productivity
 - Anticipate deployment risks
@@ -31,6 +32,7 @@ Rather than acting as a generic chatbot, these agents behave like highly special
 Examples include:
 
 - A Productivity Guardian identifying productivity degradation patterns
+- A PC Slowness Analyst helping IT teams identify recurring slow device patterns, quick wins, and structural endpoint performance issues
 - A Major Incident Intelligence Agent correlating weak signals before large incidents spread
 - A SaaS Experience Optimization Agent isolating root causes affecting Microsoft 365 or Teams experiences
 - A Ticket Deflection Agent identifying the best self-healing opportunities
@@ -77,6 +79,7 @@ https://docs.nexthink.com/platform/technical-previews/workspace-it-agents
 ## 📊 IT Operations & Support
 | Agent | Interested Teams | Description | 💬 Example Prompt |
 |---|---|---|---|
+| [PC Slowness Analyst](./agents/PC-Slowness-Analyst/) | `IT Operations` `Service Desk` `EUC` `Endpoint Engineering` `DEX` `Support` | Helps IT teams investigate, prioritize, and reduce recurring PC slowness by identifying impacted devices, qualifying symptom patterns, detecting quick wins, and surfacing structural endpoint performance issues. | *"Identify the top 10 slowest PCs to treat first, focusing on recurring issues, quick wins, and structural root causes."* |
 | [Alert Fatigue Manager](./agents/Alert-Fatigue-Manager/) | `IT Operations` `Support` `NOC` `Service Desk` | Helps IT teams reduce operational noise and prioritize actionable alerts by analyzing ignored or low-value monitoring signals. | *"Which operational alerts are most frequently ignored and generate the least actionable value?"* |
 | [Major Incident Intelligence Agent](./agents/Major-Incident-Intelligence-Agent/) | `IT Operations` `NOC` `Infrastructure` `Support` | Correlates weak operational signals to detect major incidents early and assess impact severity and blast radius. | *"Detect any emerging major incident patterns before large-scale user impact occurs."* |
 | [IT Hygiene & Operational Health Agent](./agents/IT-Hygiene-Operational-Health-Agent/) | `IT Operations` `Endpoint Engineering` `EUC` `Support` | Maintains operational hygiene by detecting unhealthy collectors, degraded devices, and technical debt accumulation. | *"Reveal hidden operational hygiene problems degrading long-term endpoint stability."* |
@@ -272,6 +275,18 @@ Examples:
 - Collaboration instability detection
 
 ---
+### PC Slowness Analyst
+
+Example recurring task:
+
+> Identify the top 10 workplace devices showing recurring PC slowness over the last 30 days, excluding servers and focusing only on devices matching the defined naming pattern. Prioritize devices with user-visible degradation, repeated performance issues, and quick-win remediation opportunities such as low disk space, pending reboot, excessive reboot age, Windows Update backlog, high CPU Queue Length, memory pressure, OneDrive synchronization backlog, or abnormal endpoint security and management tool activity. For each device, explain the main symptoms, likely causes, recurrence pattern, recommended action, expected benefit, operational effort, and follow-up indicator. Clearly distinguish recurring structural issues from isolated episodes. At the start of each analysis, include the date and time.
+
+Task configuration:
+- Schedule: Daily at 9:00 AM
+- Agent: PC Slowness Analyst
+- Goal: Continuously surface the slowest and most actionable PCs to treat, helping IT teams reduce recurring endpoint performance issues through a practical improvement routine
+
+---
 
 ### Security & Compliance Reviews
 
@@ -365,6 +380,7 @@ The Task will then execute automatically according to the configured cadence.
 | Agent | Example Scheduled Task |
 |---|---|
 | Productivity Guardian | Detect employee populations losing the most productive time every morning |
+| PC Slowness Analyst | Identify the top 10 slowest workplace devices every morning, focusing on recurring degradation, quick wins, hygiene issues, and structural endpoint performance patterns |
 | Major Incident Intelligence Agent | Monitor emerging major incident weak signals every 15 minutes |
 | Endpoint Security Posture Auditor | Run weekly endpoint compliance drift reviews |
 | Remote Actions Intelligence Agent | Analyze automation failures and scheduler optimization opportunities daily |
@@ -378,6 +394,7 @@ The Task will then execute automatically according to the configured cadence.
 | Agent | Example Prompt |
 |---|---|
 | **Productivity Guardian** | Detect the employee populations currently losing the most productive time due to recurring digital friction. Quantify estimated business impact, identify the top contributing technical factors, prioritize the highest-impact remediation opportunities, and estimate the expected productivity gains and operational benefits for each recommendation. |
+| **PC Slowness Analyst** | Identify the 10 workplace devices with the most recurring PC slowness over the last 30 days. Focus on managed end-user devices only, exclude servers, and apply the defined device naming pattern. Prioritize situations that are recurring during user-present working hours rather than isolated technical spikes. For each device, qualify the slowness pattern, identify the main symptoms, correlate endpoint signals such as CPU Queue Length, memory pressure, disk space, boot duration, reboot age, update status, OneDrive synchronization, endpoint security activity, and endpoint management activity. Recommend realistic quick wins first, then structural remediation opportunities. Clearly indicate the expected benefit, operational effort, owner to confirm, and follow-up indicator. At the start of each analysis, include the date and time. |
 | **Endpoint Security Posture Auditor** | Identify the endpoint populations with the highest security exposure by correlating missing security controls, patch gaps, unhealthy security agents, outdated configurations, privilege risks, and operational hygiene weaknesses. Prioritize the highest-risk findings and recommend remediation actions with estimated risk reduction impact. |
 | **Alert Fatigue Manager** | Analyze the last 30 days of monitoring alerts to identify the noisiest signals, ignored alerts, recurring false positives, and low-value monitors. Recommend suppressions, threshold tuning, prioritization improvements, and monitoring rationalization opportunities to reduce operational fatigue while preserving actionable visibility. |
 | **Live Dashboard Builder** | Build an executive DEX dashboard highlighting the top drivers of employee friction, most impacted business units, collaboration degradation trends, remediation effectiveness, ticket deflection performance, operational hotspots, and strategic risks with clear visual prioritization and executive-ready storytelling. |
@@ -418,6 +435,7 @@ These examples are intentionally detailed and operationally prescriptive in orde
 | Agent | Advanced Example Prompt |
 |---|---|
 | **Productivity Guardian** | Identify the 15 employee populations currently losing the most productive time due to recurring digital friction patterns. Correlate DEX degradation trends with collaboration quality, login delays, crashes, freezes, CPU saturation, network instability, and application latency. Estimate the total productivity impact in hours lost and business impact per population. For each population, identify the primary contributing applications, devices, locations, or endpoint conditions driving the degradation, then recommend the highest-impact remediation opportunities along with expected productivity recovery potential and operational complexity. |
+| **PC Slowness Analyst** | Analyze recurring PC slowness across the managed workplace device estate over the last 30 days, excluding servers and limiting the scope to devices matching the defined naming pattern. Focus only on user-present working periods when possible, and clearly separate recurring degradation from isolated episodes. Identify the top 10 devices to treat first based on user-visible slowness, recurrence, operational impact, and remediation feasibility. For each device, qualify the slowness pattern: permanent, recurring, punctual, random, startup-related, post-idle, post-lunch, post-resume, post-location-change, update-related, synchronization-related, application-related, or background-task-related. Correlate endpoint telemetry including CPU usage, CPU Queue Length, logical cores, memory pressure, available memory, disk free space, boot duration, logon duration, reboot age, update backlog, OneDrive synchronization, security tool activity, endpoint management activity, and application resource consumption. Identify devices cumulating several hygiene issues and highlight the best quick wins first. Then detect structural patterns by hardware model, operating system version, location, device family, endpoint security tooling, management tooling, and user workload. Compare degraded devices with healthy devices where possible and explain the main differences. For each recommendation, specify the expected benefit, operational effort, owner to confirm, follow-up indicator, and whether the action is corrective, preventive, or optimization-oriented. Conclude with a practical action plan for a small operational service desk team with limited capacity, and invite the operator to challenge feasibility, ownership, and prioritization. At the start of each analysis, include the date and time. |
 | **Endpoint Security Posture Auditor** | Identify the endpoint populations with the weakest security posture by correlating missing patches, unhealthy security agents, disabled protections, unsupported operating systems, local admin exposure, encryption gaps, stale devices, outdated BIOS versions, and operational hygiene weaknesses. For each population, estimate relative exposure severity, identify the primary risk drivers, explain the likely security implications, and recommend the most impactful remediation priorities with expected risk reduction outcomes. |
 | **Alert Fatigue Manager** | Analyze all monitoring alerts generated during the last 30 days and identify the noisiest alerts, least actionable monitors, ignored signals, recurring false positives, and operationally expensive alert patterns. Correlate alert volumes with remediation outcomes and escalation activity to determine which alerts generate operational value versus operational fatigue. Recommend threshold tuning, suppression opportunities, prioritization improvements, consolidation opportunities, and monitoring strategy optimizations while preserving meaningful operational visibility. |
 | **Live Dashboard Builder** | Create an executive DEX dashboard highlighting the most impacted business units, top productivity degradation drivers, collaboration experience trends, operational hotspots, remediation effectiveness, automation impact, ticket deflection trends, and structural risk areas. Organize the dashboard using clear operational storytelling, prioritize visual clarity and executive readability, and recommend the most important KPIs, drilldowns, and strategic focus areas for leadership review. |
