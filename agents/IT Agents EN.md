@@ -122,3 +122,8 @@ Optimizes Engage campaigns and IT communication by analyzing engagement, timing,
 
 ## 25. Workforce Sentiment Inference Agent
 Identifies populations silently suffering from accumulated digital friction without necessarily opening support tickets. Detects operational fatigue patterns using behavioral and DEX-related telemetry.
+
+---
+
+## 26. PC Slowness Analyst Agent
+The PC Slowness Analyst is a Nexthink Workspace IT Agent designed to help IT Operations, Service Desk, EUC, Endpoint Engineering, and DEX teams investigate and reduce recurring PC slowness across managed workplace devices.
