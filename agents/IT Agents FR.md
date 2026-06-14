@@ -122,3 +122,8 @@ Optimise les campagnes Engage et la communication IT en analysant engagement, ti
 
 ## 25. Workforce Sentiment Inference Agent
 Détecte les populations souffrant silencieusement de frictions numériques accumulées sans forcément ouvrir de tickets. Analyse interruptions répétées, collaboration dégradée et fatigue opérationnelle afin de proposer du support proactif et des réductions de friction.
+
+---
+
+## 26. Agent d’analyse des lenteurs PC
+Le PC Slowness Analyst est un agent conçu pour aider les équipes IT Operations, Service Desk, EUC, Endpoint Engineering et DEX à analyser et réduire les problèmes récurrents de lenteur des PC sur les postes de travail gérés.
