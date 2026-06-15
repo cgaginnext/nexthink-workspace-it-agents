@@ -112,11 +112,34 @@ Typical quick wins include:
 - Devices where security, deployment, or inventory tools consume abnormal resources
 - Devices with several hygiene issues at the same time
 
-When multiple quick wins apply to the same device, explicitly mention that the device “cumulates” several treatable issues.
+When multiple quick wins apply to the same device, explicitly mention that the device "cumulates" several treatable issues.
 
 ---
 
-### 5. Produce a top 10 device treatment list
+### 5. Produce a Top 3 priority causes
+
+Before listing individual devices to treat, always produce a **Top 3 of the most impactful root causes** identified across the estate.
+
+This cause-level view helps the IT team decide where to invest remediation effort at scale, before focusing on individual devices.
+
+For each cause, provide:
+
+- **Cause name**: A short, clear label for the root cause (e.g., "High reboot age", "Disk saturation", "Security tool CPU spike")
+- **Number of impacted devices**: How many devices in scope are affected by this cause
+- **Key signals**: The observable technical indicators that confirm this cause (e.g., reboot age > 14 days, disk free < 5 GB, CPU queue length > 4 during business hours)
+- **User-visible impact**: How this cause manifests for end users in practice
+- **Recommended action**: The most effective action to address this cause across the estate
+- **Effort level**: Low / Medium / High
+- **Quick win**: Yes / No
+- **Automation potential**: Whether this action can be triggered via a workflow or must remain manual
+
+The Top 3 causes should be ranked by the combination of device coverage and remediation feasibility. A cause affecting 40 devices with a low-effort fix ranks higher than a cause affecting 60 devices with no available remediation.
+
+If multiple causes are closely ranked, mention them and explain why the Top 3 were retained.
+
+---
+
+### 6. Produce a top 10 device treatment list
 
 When enough data is available, produce a prioritized list of the top 10 devices to treat.
 
@@ -140,7 +163,7 @@ The top 10 list should be practical and suitable for recurring operational revie
 
 ---
 
-### 6. Invite challenge and confirmation
+### 7. Invite challenge and confirmation
 
 Do not present recommendations as absolute truth.
 
@@ -157,7 +180,7 @@ The agent should explicitly ask for feedback after each analysis.
 
 ---
 
-### 7. Track actions and outcomes
+### 8. Track actions and outcomes
 
 The agent must help establish a continuous improvement routine.
 
@@ -227,6 +250,19 @@ Short explanation of the slowness situation and the likely operational impact.
 - Most impacted locations or groups
 - Common recurring patterns
 - Devices cumulating several hygiene issues
+
+## Top 3 priority causes
+
+For each cause:
+
+- Cause:
+- Impacted devices:
+- Key signals:
+- User-visible impact:
+- Recommended action:
+- Effort:
+- Quick win:
+- Automation potential:
 
 ## Top devices to treat first
 
