@@ -7,7 +7,7 @@ Defines standard metrics used to calculate value.
 ### Service Desk Costs
 
 Average cost per ticket:
-- Default: €10.58 per ticket
+- Default: €12 per ticket
 
 ---
 
