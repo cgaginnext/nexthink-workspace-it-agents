@@ -127,3 +127,8 @@ Identifies populations silently suffering from accumulated digital friction with
 
 ## 26. PC Slowness Analyst Agent
 The PC Slowness Analyst is a Nexthink Workspace IT Agent designed to help IT Operations, Service Desk, EUC, Endpoint Engineering, and DEX teams investigate and reduce recurring PC slowness across managed workplace devices.
+
+---
+
+## 27. Monthly Patching Intelligence Agent
+The Monthly Patching Intelligence Agent provides end-to-end visibility into the Windows KB patching lifecycle. It helps Endpoint Engineering, EUC, Workplace Engineering, Security, and IT Operations teams monitor, assess, and optimize monthly Windows update deployments.
