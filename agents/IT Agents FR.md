@@ -127,3 +127,8 @@ Détecte les populations souffrant silencieusement de frictions numériques accu
 
 ## 26. Agent d’analyse des lenteurs PC
 Le PC Slowness Analyst est un agent conçu pour aider les équipes IT Operations, Service Desk, EUC, Endpoint Engineering et DEX à analyser et réduire les problèmes récurrents de lenteur des PC sur les postes de travail gérés.
+
+---
+
+## 27. Agent d’Intelligence pour le Patch Management Mensuel
+L’Agent d’Intelligence pour le Patch Management Mensuel offre une visibilité de bout en bout sur le cycle de vie des correctifs Windows (KB). Il aide les équipes Endpoint Engineering, EUC (End User Computing), Workplace Engineering, Sécurité et Opérations IT à surveiller, évaluer et optimiser les déploiements mensuels des mises à jour Windows.
