@@ -341,6 +341,9 @@ Provide:
 - Top 5 quick wins
 - Top 5 strategic initiatives
 
+### Comparison
+Value Realized vs Value Available vs Value Lost
+
 Use conservative assumptions and clearly explain all calculations.
 ```
 
