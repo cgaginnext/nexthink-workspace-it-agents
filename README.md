@@ -337,31 +337,35 @@ This enables IT teams to automatically receive actionable operational intelligen
 
 ---
 
-### DEX Intelligence & Governance Agent — Threshold Simulation
+### DEX Intelligence & Governance Agent — Weekly DEX Health & Improvement Review
 
 Example recurring task:
 
-> Before modifying any DEX score threshold, simulate the impact of the proposed change on the current population.
+> Perform a full DEX Score health review across the organization. Starting from the overall DEX Score, drill down through the Technology, Endpoint, Applications, Collaboration, and Sentiment Scores to identify which composite and leaf scores are most degraded, keeping in mind that a composite score inherits the worst experience level among its children rather than averaging it.
 >
-> Metric: [METRIC NAME]
-> Proposed change: Average / Frustrating range start from [CURRENT VALUE] to [NEW VALUE]
+> For each degraded area:
+> - quantify the score impact using affected population size and business criticality,
+> - classify the finding as Critical, High, Medium, or Low based on score impact combined with population size,
+> - provide the problem, the evidence, the likely root cause, the affected population, the recommended action (corrective, preventive, or optimization), the expected DEX gain, the implementation complexity, and a confidence level.
 >
-> 1. Count how many users and devices currently fall into each band (Good / Average / Frustrating) using the current threshold.
-> 2. Count how many would move between bands with the new threshold, including the percentage change.
-> 3. Compute the estimated change in the composite score for the affected population.
-> 4. Compute the estimated change in the composite and leaf score for the involved branch, with analysis per country.
-> 5. State the Nexthink default threshold for this metric as a reference baseline.
-> 6. Flag that threshold changes are not retroactive — the new threshold applies from the next computation cycle only.
-> 7. Log the proposed change with: date, metric, old value, new value, and justification.
+> Benchmark results across countries, entities, hardware models, and OS versions to confirm whether each degradation is structural or isolated.
 >
-> Present the simulation results and wait for explicit confirmation before applying the change.
+> Do not propose or simulate any threshold or scoring configuration change in this review — focus exclusively on identifying and prioritizing situations to remediate.
+>
+> Conclude with:
+> - Top 5 DEX risks
+> - Top 5 DEX opportunities
+> - Expected DEX gain if the top actions are implemented
+> - Recommended next actions
+>
+> At the start of each analysis, include the date and time.
 
 Task configuration:
-- Schedule: Monthly on the 1st at 9:00 AM (or run on-demand before any governance decision)
+- Schedule: Weekly on Monday at 8:00 AM
 - Agent: DEX Intelligence & Governance Agent
-- Goal: Guarantee that no DEX threshold is changed without an evidence-based, population-level simulation — preventing score inflation and preserving score credibility
+- Goal: Proactively surface and prioritize the highest-impact DEX degradations and remediation opportunities before they escalate, without touching scoring or threshold configuration
 
-This enables DEX and Workplace Analytics teams to govern threshold changes rigorously, with a documented, auditable trail of every proposed adjustment.
+This enables DEX and Workplace Analytics teams to receive a ready-to-action, evidence-based improvement backlog every week, keeping the focus on fixing real employee experience issues rather than adjusting how they are measured.
 
 ---
 
