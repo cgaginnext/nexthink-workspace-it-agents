@@ -778,13 +778,13 @@
       <div class="filter-strip" id="cat-filter-strip">
         <button class="filter-btn active" onclick="filterCat('all', this)">All</button>
         <button class="filter-btn" onclick="filterCat('security', this)"><i class="ti ti-shield"></i> Security & Compliance</button>
+        <button class="filter-btn" onclick="filterCat('analytics', this)"><i class="ti ti-chart-bar"></i> Analytics</button>
         <button class="filter-btn" onclick="filterCat('automation', this)"><i class="ti ti-robot"></i> Automation</button>
         <button class="filter-btn" onclick="filterCat('operations', this)"><i class="ti ti-activity"></i> IT Operations</button>
         <button class="filter-btn" onclick="filterCat('change', this)"><i class="ti ti-rocket"></i> Change Management</button>
         <button class="filter-btn" onclick="filterCat('experience', this)"><i class="ti ti-mood-happy"></i> Employee Experience</button>
         <button class="filter-btn" onclick="filterCat('collaboration', this)"><i class="ti ti-cloud"></i> SaaS & Cloud</button>
         <button class="filter-btn" onclick="filterCat('finops', this)"><i class="ti ti-coin"></i> FinOps & Green IT</button>
-        <button class="filter-btn" onclick="filterCat('analytics', this)"><i class="ti ti-chart-bar"></i> Analytics</button>
       </div>
 
       <div id="agent-catalog"></div>
@@ -1035,7 +1035,27 @@ Finish with an executive summary suitable for a CIO or DEX Steering Committee, e
 Use concise, evidence-based, and highly conservative assumptions throughout.</div>
         <button class="copy-btn" onclick="copyToClipboard(this, this.previousElementSibling.innerText)"><i class="ti ti-copy"></i> Copy</button>
       </div>
-	  
+
+	  <p class="sub-label">Full example — DEX Intelligence & Governance Agent (on-demand / before any threshold change)</p>
+      <div class="prompt-card" style="margin-top:0">
+        <div class="plabel">DEX Intelligence & Governance Agent · Monthly on the 1st at 9:00 AM (or run on-demand before any governance decision)</div>
+        <div class="prompt-text" style="padding-right:1rem">Before modifying any DEX score threshold, simulate the impact of the proposed change on the current population.
+
+Metric: [METRIC NAME]
+Proposed change: Average / Frustrating range start from [CURRENT VALUE] to [NEW VALUE]
+
+1. Count how many users and devices currently fall into each band (Good / Average / Frustrating) using the current threshold.
+2. Count how many would move between bands with the new threshold, including the percentage change.
+3. Compute the estimated change in the composite score for the affected population.
+4. Compute the estimated change in the composite and leaf score for the involved branch, with analysis per country.
+5. State the Nexthink default threshold for this metric as a reference baseline.
+6. Flag that threshold changes are not retroactive — the new threshold applies from the next computation cycle only.
+7. Log the proposed change with: date, metric, old value, new value, and justification.
+
+Present the simulation results and wait for explicit confirmation before applying the change.</div>
+        <button class="copy-btn" onclick="copyToClipboard(this, this.previousElementSibling.innerText)"><i class="ti ti-copy"></i> Copy</button>
+      </div>
+
     </div>
   </div>
 
@@ -1160,6 +1180,35 @@ const categories = [
         teams: ['Endpoint Engineering','EUC','Workplace Engineering','Security','IT Operations'],
         desc: 'Provides end-to-end visibility into the Windows KB patching lifecycle, helping teams monitor, assess, and optimize monthly Windows update deployments.',
         prompt: "Give me a full patching status overview for this month's Windows KB updates — coverage, gaps, failures, and devices most at risk."
+      }
+    ]
+  },
+  {
+    id: 'analytics',
+    icon: '📈',
+    title: 'Analytics & Steering',
+    color: '#803795', bg: '#F3E8F7',
+    agents: [
+      {
+        name: 'Live Dashboard Builder',
+        slug: 'Live-Dashboard-Builder',
+        teams: ['DEX','Operations','Leadership','Workplace Analytics'],
+        desc: 'Dynamically creates Nexthink dashboards and operational reporting views from natural language requests.',
+        prompt: 'Create an executive dashboard showing global DEX health, collaboration quality, and top operational risks.'
+      },
+      {
+        name: 'Workplace Personas & Segmentation Intelligence Agent',
+        slug: 'Workplace-Personas-Segmentation-Intelligence-Agent',
+        teams: ['DEX','Workplace Analytics','Transformation','Digital Workplace'],
+        desc: 'Builds workplace personas from employee behaviors and digital workstyles to enable intelligent personalization.',
+        prompt: 'Build workplace personas automatically based on collaboration habits, mobility, and workstyles.'
+      },
+      {
+        name: 'DEX Intelligence & Governance Agent',
+        slug: 'DEX-Intelligence-Governance-Agent',
+        teams: ['DEX','Digital Workplace','Workplace Analytics','IT Leadership'],
+        desc: 'Analyzes, governs, and optimizes the Nexthink DEX Score — explaining score composition, root causes, threshold governance, benchmarking, and remediation priorities.',
+        prompt: 'Why did our DEX score drop this week, and which threshold or population is most responsible?'
       }
     ]
   },
@@ -1357,28 +1406,6 @@ const categories = [
         prompt: 'Identify unnecessary workplace technology costs without negatively impacting employee experience.'
       }
     ]
-  },
-  {
-    id: 'analytics',
-    icon: '📈',
-    title: 'Analytics & Steering',
-    color: '#803795', bg: '#F3E8F7',
-    agents: [
-      {
-        name: 'Live Dashboard Builder',
-        slug: 'Live-Dashboard-Builder',
-        teams: ['DEX','Operations','Leadership','Workplace Analytics'],
-        desc: 'Dynamically creates Nexthink dashboards and operational reporting views from natural language requests.',
-        prompt: 'Create an executive dashboard showing global DEX health, collaboration quality, and top operational risks.'
-      },
-      {
-        name: 'Workplace Personas & Segmentation Intelligence Agent',
-        slug: 'Workplace-Personas-Segmentation-Intelligence-Agent',
-        teams: ['DEX','Workplace Analytics','Transformation','Digital Workplace'],
-        desc: 'Builds workplace personas from employee behaviors and digital workstyles to enable intelligent personalization.',
-        prompt: 'Build workplace personas automatically based on collaboration habits, mobility, and workstyles.'
-      }
-    ]
   }
 ];
 
@@ -1421,6 +1448,7 @@ const taskPrompts = [
   { agent: 'Change Communication Intelligence Agent', text: 'Analyze the effectiveness of IT communications and Engage campaigns by identifying which messages, communication timing strategies, targeting methods, behavioral patterns, and engagement sequences generate the highest employee adoption, awareness, participation, and operational outcomes while minimizing communication fatigue.' },
   { agent: 'Workforce Sentiment Inference Agent', text: 'Identify populations experiencing silent operational fatigue and structural digital frustration by correlating recurring degradations, DEX decline trends, endpoint instability, repeated interruptions, degraded collaboration quality, application instability, and persistent operational friction before support escalation or productivity decline becomes visible.' },
   { agent: 'Monthly Patching Intelligence Agent', text: "Analyze the current monthly Windows KB patching cycle across the managed device estate. Identify total deployment coverage, devices that have not yet received the update, devices where installation failed or is pending restart, and populations with recurring patching failures. Segment results by OS version, device model, location, and business entity. Flag devices with the highest exposure risk based on patch age, criticality, and endpoint health context. Recommend prioritized remediation actions distinguishing quick wins from structural patching hygiene issues. At the start of each analysis, include the date and time and the KB reference for the current month's cumulative update." },
+  { agent: 'DEX Intelligence & Governance Agent', text: "Analyze the current DEX Score and its subscores (Technology, Endpoint, Applications, Collaboration, Sentiment) to identify the primary contributors to any degradation since the last review. For each degraded area, drill down to the responsible leaf scores, affected applications, and impacted populations, and quantify the score impact. Benchmark performance across countries, entities, and device populations to surface structural outliers. Evaluate whether current thresholds remain aligned with actual fleet distributions and flag any governance drift or risk of score inflation. Conclude with the top DEX risks, top opportunities, and the highest-impact remediation actions to prioritize. At the start of each analysis, include the date and time." },
 ];
 
 const advancedPrompts = [
@@ -1450,6 +1478,7 @@ const advancedPrompts = [
   { agent: 'Change Communication Intelligence Agent', text: 'Analyze Engage campaigns and IT communication effectiveness to determine which message types, channels, timing strategies, segmentation approaches, behavioral patterns, and engagement sequences generate the strongest employee participation, awareness, adoption, and operational outcomes. Identify communication fatigue patterns, ineffective targeting strategies, and underperforming campaigns, then recommend optimized communication strategies tailored to employee personas and transformation initiatives.' },
   { agent: 'Workforce Sentiment Inference Agent', text: 'Identify the 10 most structurally unstable devices with the greatest negative impact on DEX, focusing on recurring and systemic degradation rather than isolated incidents. For each device, analyze both endpoint and application leaf scores while taking into account the DEX Score configuration and weighting for endpoint and application metrics. Correlate degraded scores with the applications actively used by the device\'s primary user to determine which applications, binaries, or endpoint conditions contribute most to the low overall DEX score. Identify the primary root cause driving the degradation and, when crashes or freezes are involved, specify the main application, executable, or binary responsible along with the proportion of total crashes or freezes it represents. For each device, provide the device name, primary user, overall DEX score, most impacted leaf scores, contributing factors, likely root cause, and recommend 1 high-impact remediation action. Explain why the recommendation is relevant, the expected DEX improvement impact, whether the action is corrective, preventive, or optimization-oriented, and any important operational follow-up considerations. Rank the output from highest structural instability impact to lowest using concise, evidence-based, and operationally actionable explanations.' },
   { agent: 'Monthly Patching Intelligence Agent', text: "Conduct a comprehensive end-to-end analysis of the current monthly Windows KB patching cycle across the full managed device estate. Begin by identifying the KB reference for this month's cumulative update for each Windows version present in the environment (Windows 10 21H2, 22H2, Windows 11 22H2, 23H2, 24H2, and any others detected). For each OS version, report total devices in scope, devices that have successfully installed the update, devices where installation is pending restart, devices where installation failed, and devices with no installation attempt recorded. Segment all findings by OS version, hardware model, location, organizational unit, and business entity to surface structural patching gaps. Identify devices that have missed two or more consecutive monthly updates and flag them as chronic non-compliant endpoints. For devices with installation failures, correlate with available endpoint signals such as low disk space, unhealthy collectors, stale last-seen dates, pending reboots exceeding 14 days, or known compatibility issues, and classify the most probable failure cause for each population. Cross-reference unpatched devices with endpoint security posture indicators to estimate relative exposure severity. For each identified gap population, recommend a prioritized remediation action specifying the expected operational effort, the team responsible, the follow-up indicator, and whether the action is corrective, preventive, or hygiene-oriented. Conclude with an executive-ready patching scorecard summarizing overall fleet compliance rate, highest-risk populations, top failure drivers, and the recommended immediate actions for the next 72 hours. At the start of the analysis, include the date, time, and the KB references analyzed." },
+  { agent: 'DEX Intelligence & Governance Agent', text: "Conduct a comprehensive DEX Score governance and root cause analysis across the organization. Begin with a full score breakdown covering DEX Score, Technology Score, Endpoint Score, Applications Score, Collaboration Score, and Sentiment Score, explicitly explaining the weak-link relationship between parent and child scores rather than treating composites as simple averages. For every degraded score, drill down to the contributing subscores and leaf scores, identify the underlying metrics and technologies responsible, and quantify score impact using affected population size and business criticality. Benchmark results across countries, business entities, departments, hardware models, OS versions, and VDI versus physical populations to surface statistically meaningful outliers rather than noise. Cross-reference Technology Score against Sentiment Score and recent campaign responses to identify perception gaps and hidden frustrations not visible in technical telemetry. Perform a threshold governance review: for each active leaf score threshold, evaluate P50, P90, and P95 fleet distributions, determine whether Good, Average, and Frustrating bands still separate experiences meaningfully, and flag thresholds that have never been revisited or that appear over- or under-sensitive. Never recommend a threshold change solely to raise a score — justify every proposed change with evidence such as the percentage of healthy users currently misclassified. Assess score and sentiment coverage to warn where conclusions may be statistically weak due to missing telemetry or connector gaps. Conclude with an executive summary structured as: DEX Overview, Root Cause Analysis, Impact Analysis, Cohort Comparison, Trend Analysis, Governance Assessment, Recommended Actions, Expected DEX Improvement, and Risks and Considerations." },
 ];
 
 const designSections = [
