@@ -68,6 +68,8 @@ https://docs.nexthink.com/platform/technical-previews/workspace-it-agents
 | [Endpoint Security Posture Auditor](./agents/Endpoint-Security-Posture-Auditor/) | `Security` `SecOps` `Endpoint Engineering` `EUC` `Compliance` | Evaluates endpoint security posture, compliance, operational hygiene, and configuration consistency across the digital workplace estate. | *"Identify devices with risky security posture drift and explain the biggest compliance gaps."* |
 | [Evergreen Compliance & Drift Agent](./agents/Evergreen-Compliance-Drift-Agent/) | `Endpoint Engineering` `Security` `EUC` `Compliance` `Operations` | Monitors deviations from enterprise standards across OS versions, policies, applications, and operational consistency. | *"Show me where endpoint configurations are drifting away from enterprise standards."* |
 | [Shadow IT & AI Usage Intelligence Agent](./agents/Shadow-IT-AI-Usage-Intelligence-Agent/) | `Security` `Governance` `Compliance` `DEX` | Detects unmanaged SaaS, AI platforms, extensions, and unsanctioned employee workflows. | *"Detect unmanaged AI tools and unsanctioned SaaS applications used by employees."* |
+| [Monthly Patching Intelligence Agent](./agents/Monthly-Patching-Intelligence-Agent/) | `Endpoint Engineering` `EUC` `Workplace Engineering` `Security` `IT Operations` | Provides end-to-end visibility into the Windows KB patching lifecycle, helping teams monitor, assess, and optimize monthly Windows update deployments. | *"Give me a full patching status overview for this month's Windows KB updates — coverage, gaps, failures, and devices most at risk."* |
+| [Executive Risk & Exposure Intelligence Agent](./agents/Executive-Risk-&-Exposure-Intelligence-Agent/) | `Security` `IT Leadership` `SecOps` `Compliance` | Continuously monitors endpoint security posture, fleet health, and DEX to compute a Composite Risk Score and deliver prioritized, audience-appropriate executive risk reporting with remediation playbooks. | *"Give me this week's executive risk report — top Critical findings, affected device counts, and recommended remediation playbooks."* |
 
 ## 📈 Analytics & Steering
 | Agent | Interested Teams | Description | 💬 Example Prompt |
@@ -75,6 +77,7 @@ https://docs.nexthink.com/platform/technical-previews/workspace-it-agents
 | [Live Dashboard Builder](./agents/Live-Dashboard-Builder/) | `DEX` `Operations` `Leadership` `Workplace Analytics` | Dynamically creates Nexthink dashboards and operational reporting views from natural language requests. | *"Create an executive dashboard showing global DEX health, collaboration quality, and top operational risks."* |
 | [Workplace Personas & Segmentation Intelligence Agent](./agents/Workplace-Personas-Segmentation-Intelligence-Agent/) | `DEX` `Workplace Analytics` `Transformation` `Digital Workplace` | Builds workplace personas from employee behaviors and digital workstyles to enable intelligent personalization. | *"Build workplace personas automatically based on collaboration habits, mobility, and workstyles."* |
 | [DEX Intelligence & Governance Agent](./agents/DEX-Intelligence-Governance-Agent/) | `DEX` `Digital Workplace` `Workplace Analytics` `IT Leadership` | Analyzes, governs, and optimizes the Nexthink DEX Score — explaining score composition, root causes, threshold governance, benchmarking, and remediation priorities. | *"Why did our DEX score drop this week, and which threshold or population is most responsible?"* |
+| [Nexthink Assist IT Agent Designer](./agents/Nexthink-Assist-IT-Agent-Designer/) | `DEX` `Customer Success` `Transformation` `Workplace Analytics` | Designs, writes, and refines other Nexthink Assist IT Agents — producing Role & Behavior documents, knowledge source file sets, live prompts, and scheduled task instructions that respect platform constraints. | *"Draft the Role & Behavior for a new IT Agent that monitors VPN reliability for remote employees."* |
 
 ## 🤖 Automation & Remediation
 | Agent | Interested Teams | Description | 💬 Example Prompt |
@@ -131,6 +134,55 @@ Each agent contains:
 
 - Suggested complementary files to further refine the agent (up to 5 files)
 
+> **Nexthink Workspace limits:** Role & Behavior — aim for 3,000–5,000 characters, 10,000 characters hard maximum, to leave room for future updates. Resources — up to 5 files, 10 MB per file.
+
+---
+
+# Create an IT Agent in 4 Steps
+
+Less than 10 minutes. No code required.
+
+| Step | Action |
+|---|---|
+| **01 · Open Workspace** | Go to Workspace → IT Agents section → click **+** |
+| **02 · Name your Agent** | Give it a short, clear, descriptive label |
+| **03 · Write Role & Behavior** | Describe its purpose, tone, rules & output format |
+| **04 · Upload & Save** | Attach up to 5 files (optional) → click Save |
+
+💡 Agents are personal — the agents you create are visible only to you, and each new conversation starts fresh with the agent as active context.
+
+---
+
+# Writing Effective Role & Behavior
+
+Quality of instructions directly determines quality of responses.
+
+| Component | What it answers | Example |
+|---|---|---|
+| 1. Role Definition | Who is the agent? What domain? | *"You are an IT Ops agent specialized in ticket deflection."* |
+| 2. Core Objectives | What must it always achieve? | Identify repetitive incidents, surface automation candidates. |
+| 3. Behavioral Rules | How should it behave? | ROI-driven. Use conservative estimates. State assumptions. |
+| 4. Output Format | What does a good answer look like? | Prioritized tables, ranked lists, executive summaries. |
+| 5. Safety Guardrails | What should it never do? | Never fabricate metrics. Always state confidence levels. |
+
+Example excerpt — Ticket Deflection Agent:
+
+```
+# Role
+You are an IT Ops Optimization Agent specialized in:
+- Nexthink telemetry analysis
+- IT ticket reduction
+- Self-healing opportunity detection
+
+# Behavioral Rules
+Always prioritize highest ticket reduction potential.
+Use conservative estimates. State assumptions clearly.
+
+# Output
+Include: estimated ticket reduction, hours saved, impacted users, remediation complexity.
+Use prioritized tables.
+```
+
 ---
 
 # Recommended Agent Design
@@ -147,6 +199,110 @@ Each main agent document should include:
 8. Example prompts
 9. Example interactions
 10. Known limitations
+
+> The 5 components above map onto the first sections here. This repository asks contributors to use the fuller 10-section structure so agents stay consistent, reusable, and easy to review by the community.
+
+---
+
+# What to Upload as Resources
+
+Resources give your agent access to organization-specific knowledge on demand — they are retrieved when needed, not injected into every response.
+
+| Best content to upload | Supported formats | Limits |
+|---|---|---|
+| IT runbooks and SOPs · Known issue documentation · NQL query templates & references · Compliance checklists · Internal escalation processes · Device configuration references | PDF · RTF · DOCX · ODT · XLSX · XLS · ODS · PPTX · HTML · XML · JSON · YAML · CSV · TXT · MD · RST · PNG · JPG · SVG | Up to 5 files per agent · Max 10 MB per file |
+
+💡 **Quality over quantity** — one focused runbook beats five generic docs. Specific and structured content leads to better agent answers. Your Role & Behavior instructions define when and how each resource should be used.
+
+---
+
+# Use Assist to Build Your Agent
+
+**The meta approach:** use Nexthink Assist to draft your agent's Role & Behavior right inside Workspace — no blank page. Describe the IT challenge you want the agent to address, and Assist will help you structure the instructions. Then paste the draft back into Assist and ask it to "add more domain constraints," "make the output more structured," or "be more conservative with estimates."
+
+Three ways to start:
+
+- **Draft an Agent from scratch** — *"Write the Role & Behavior for a Nexthink IT Agent that proactively detects and resolves issues for VIP users. Include: role, objectives, behavioral rules, output format, and safety guardrails."*
+- **Build from an IT challenge** — *"I want an IT Agent that monitors Windows patching compliance and surfaces gaps. Draft the full Role & Behavior instructions for this Nexthink Workspace IT Agent."*
+- **Turn a runbook into instructions** — *"Here is our Tier 1 troubleshooting runbook: [paste content]. Convert this into a structured Role & Behavior document for a Nexthink IT Agent."*
+
+### 🌟 Generic IT Agent Creation Prompt
+
+> I want to create a Nexthink Assist IT Agent specialized in the following domain: [TOPIC].
+> The agent is intended for [TARGET AUDIENCE — e.g. DEX Analysts, IT Ops, Support, Security teams, etc.].
+> Before starting any analysis or content generation, it must ask scoping questions to clarify the intent, validate symptoms or the area of investigation, and confirm its understanding before proceeding.
+> First, generate a Role & Behavior in markdown of approximately 3000 to 5000 characters (hard maximum: 10,000 characters, with a comfortable margin for future adjustments).
+> Then propose a numbered list of up to 5 markdown resource files to be created one by one afterwards — for each file, include its number, title, a one-sentence description of its purpose, and the approximate character count of the content that will be generated.
+
+### Worked Example — Endpoint Performance & DEX Investigation Agent
+
+The generic prompt above, filled in for a real domain — shown here as a concrete illustration of the pattern.
+
+<details>
+<summary>Show the filled-in example prompt</summary>
+
+> I want to create a Nexthink Assist IT Agent specialized in endpoint performance troubleshooting, Digital Employee Experience (DEX) investigations, device health analysis, root-cause identification, and cross-device comparison. The agent must be generic and not tied to any specific Nexthink environment, tenant, customer, device model, operating system configuration, or internal process.
+>
+> The primary use cases are:
+> - Analysis of a specific device.
+> - Performance troubleshooting and degradation analysis.
+> - DEX investigation and end-user experience assessment.
+> - Application stability investigation.
+> - Device comparison against peer devices, populations, or reference baselines.
+> - Executive-ready investigation reports suitable for customer delivery.
+>
+> The target audience includes DEX Analysts, Endpoint Engineering teams, EUC teams, IT Operations, Service Desk engineers, Support teams, Technical Account Managers, Customer Success Managers, and Service Delivery Managers.
+>
+> Before performing any analysis, the agent must validate that sufficient information has been provided. It should proactively ask clarifying and scoping questions whenever needed. At a minimum, it should attempt to identify:
+> - Which device should be analyzed.
+> - Whether the investigation concerns a specific user, device, application, or performance symptom.
+> - A short description of the reported situation.
+> - The investigation period.
+> - Business impact and user impact.
+> - Recent changes, updates, deployments, or remediation actions already performed.
+> - Whether comparison with other devices is required.
+> - The expected outcome of the investigation.
+>
+> The agent must not immediately jump into conclusions. It should first confirm its understanding of the request and define the scope of the analysis.
+>
+> Once sufficient context is available, the agent must systematically produce structured investigations focused on root-cause analysis. Reports should distinguish facts, observations, correlations, hypotheses, findings, and recommendations. The agent must correlate Nexthink signals and metrics including DEX scores, endpoint scores, updates, software changes, CPU utilization, memory utilization, resource consumption, startup performance, logon performance, application crashes, freezes, network health indicators, user experience metrics, and remediation events to identify probable root causes and contributing factors.
+>
+> The agent must be capable of generating investigation reports using the following standard structure:
+>
+> - Executive Summary
+> - Device & User Context
+> - DEX Score Analysis
+> - Assessment
+> - Performance Assessment
+>   - CPU Utilization
+>   - Memory Utilization
+>   - Startup and Logon Performance
+>   - Resource Utilization
+> - Application Stability Investigation
+> - Stability Summary
+> - Findings by Application
+> - Correlation Analysis
+> - Actions Taken
+> - Post-Remediation Observations
+> - Assessment
+> - System Freeze Analysis
+> - System-Wide Impact Analysis
+> - Outstanding Issues / Remaining Risks
+> - Conclusion
+> - Recommendations
+>
+> The agent should quantify impact whenever possible, identify trends over time, compare findings with peer devices when relevant, assess remediation effectiveness, highlight remaining concerns, explain why issues occurred, and clearly state confidence levels when evidence is incomplete. The communication style should be professional, evidence-based, structured, customer-facing, and suitable for both technical and executive audiences.
+>
+> Generate:
+> 1. A complete Role & Behavior section in markdown of approximately 5,000 characters (hard maximum 10,000).
+>
+> Before generating the next step, confirm that I am ready to proceed. Continue this pattern throughout the process, requesting confirmation before each new section is created.
+>
+> 2. A numbered list of up to 5 markdown resource files to create afterwards, including for each file: title, purpose, key contents, and approximate character count.
+
+</details>
+
+🏭 **The next level — build a factory:** once this pattern works, the only two variables to substitute are `[TOPIC]` and `[TARGET AUDIENCE]`. Everything else — deliverable structure, size constraint, generation sequence, and resource list format — is already encoded and will consistently produce the same output model, accelerating agent creation at scale while ensuring consistency and governance across all agents.
 
 ---
 
