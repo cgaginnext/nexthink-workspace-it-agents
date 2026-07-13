@@ -1106,9 +1106,211 @@ At the start of each analysis, include the date and time.</div>
           📎 Up to 5 complementary files to further refine the agent's behavior and scope
         </div>
       </div>
+      <div class="tip-box">
+        <p><strong>Nexthink Workspace limits:</strong> Role & Behavior — aim for 3,000–5,000 characters, 10,000 characters hard maximum, to leave room for future updates. Resources — up to 5 files, 10 MB per file.</p>
+      </div>
+
+      <p class="sub-label">Create an IT Agent in 4 steps</p>
+      <p class="section-sub" style="margin-bottom:0.9rem">Less than 10 minutes, no code required.</p>
+      <div class="mode-grid">
+        <div class="mode-card">
+          <i class="ti ti-folder-open" style="color:var(--nx-blue)"></i>
+          <h3>01 · Open Workspace</h3>
+          <p>Go to Workspace → IT Agents section → click <strong>+</strong>.</p>
+        </div>
+        <div class="mode-card">
+          <i class="ti ti-tag" style="color:var(--nx-teal)"></i>
+          <h3>02 · Name your Agent</h3>
+          <p>Give it a short, clear, descriptive label.</p>
+        </div>
+        <div class="mode-card">
+          <i class="ti ti-file-text" style="color:var(--nx-purple)"></i>
+          <h3>03 · Write Role & Behavior</h3>
+          <p>Describe its purpose, tone, rules & output format.</p>
+        </div>
+        <div class="mode-card">
+          <i class="ti ti-upload" style="color:var(--nx-papaya)"></i>
+          <h3>04 · Upload & Save</h3>
+          <p>Attach up to 5 files (optional) → click Save.</p>
+        </div>
+      </div>
+      <div class="tip-box">
+        <p>Agents are personal — the agents you create are visible only to you, and each new conversation starts fresh with the agent as active context.</p>
+      </div>
+
+      <p class="sub-label">Writing effective Role & Behavior</p>
+      <p class="section-sub" style="margin-bottom:0.9rem">Quality of instructions directly determines quality of responses.</p>
+      <div class="table-wrap">
+        <table class="nx-table">
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>What it answers</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1. Role Definition</td><td>Who is the agent? What domain?</td><td>"You are an IT Ops agent specialized in ticket deflection."</td></tr>
+            <tr><td>2. Core Objectives</td><td>What must it always achieve?</td><td>Identify repetitive incidents, surface automation candidates.</td></tr>
+            <tr><td>3. Behavioral Rules</td><td>How should it behave?</td><td>ROI-driven. Use conservative estimates. State assumptions.</td></tr>
+            <tr><td>4. Output Format</td><td>What does a good answer look like?</td><td>Prioritized tables, ranked lists, executive summaries.</td></tr>
+            <tr><td>5. Safety Guardrails</td><td>What should it never do?</td><td>Never fabricate metrics. Always state confidence levels.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="prompt-card" style="margin-top:0">
+        <div class="plabel">Example excerpt — Ticket Deflection Agent</div>
+        <div class="prompt-text" style="padding-right:1rem"># Role
+You are an IT Ops Optimization Agent specialized in:
+- Nexthink telemetry analysis
+- IT ticket reduction
+- Self-healing opportunity detection
+
+# Behavioral Rules
+Always prioritize highest ticket reduction potential.
+Use conservative estimates. State assumptions clearly.
+
+# Output
+Include: estimated ticket reduction, hours saved, impacted users, remediation complexity.
+Use prioritized tables.</div>
+        <button class="copy-btn" onclick="copyToClipboard(this, this.previousElementSibling.innerText)"><i class="ti ti-copy"></i> Copy</button>
+      </div>
 
       <p class="sub-label">Recommended agent document structure</p>
+      <p style="font-size:13px;color:var(--color-text-secondary);margin-bottom:0.9rem;line-height:1.6">The 5 components above map onto the first sections below. This repository asks contributors to use the fuller 10-section structure so agents stay consistent, reusable, and easy to review by the community.</p>
       <div id="design-sections"></div>
+
+      <p class="sub-label">What to upload as Resources</p>
+      <p class="section-sub" style="margin-bottom:0.9rem">Resources give your agent access to organization-specific knowledge on demand — they are retrieved when needed, not injected into every response.</p>
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="label">Best content to upload</div>
+          <div>
+            📘 IT runbooks and SOPs<br>
+            🐞 Known issue documentation<br>
+            🔎 NQL query templates & references<br>
+            ✅ Compliance checklists<br>
+            📈 Internal escalation processes<br>
+            💻 Device configuration references
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="label">Supported formats</div>
+          <div>
+            PDF · RTF · DOCX · ODT · XLSX · XLS · ODS<br>
+            PPTX · HTML · XML · JSON · YAML · CSV<br>
+            TXT · MD · RST · PNG · JPG · SVG
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="label">Limits</div>
+          <div>
+            📎 Up to 5 files per agent<br>
+            📏 Max 10 MB per file
+          </div>
+        </div>
+      </div>
+      <div class="tip-box">
+        <p><strong>Quality over quantity:</strong> one focused runbook beats five generic docs. Specific and structured content leads to better agent answers — your Role & Behavior instructions define when and how each resource should be used.</p>
+      </div>
+
+      <p class="sub-label">Use Assist to build your agent</p>
+      <div class="tip-box">
+        <p><strong>The meta approach:</strong> use Nexthink Assist to draft your agent's Role & Behavior right inside Workspace — no blank page. Describe the IT challenge you want the agent to address, and Assist will help you structure the instructions. Then paste the draft back into Assist and ask it to "add more domain constraints," "make the output more structured," or "be more conservative with estimates."</p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="label">Draft an Agent from scratch</div>
+          <div>"Write the Role & Behavior for a Nexthink IT Agent that proactively detects and resolves issues for VIP users. Include: role, objectives, behavioral rules, output format, and safety guardrails."</div>
+        </div>
+        <div class="info-item">
+          <div class="label">Build from an IT challenge</div>
+          <div>"I want an IT Agent that monitors Windows patching compliance and surfaces gaps. Draft the full Role & Behavior instructions for this Nexthink Workspace IT Agent."</div>
+        </div>
+        <div class="info-item">
+          <div class="label">Turn a runbook into instructions</div>
+          <div>"Here is our Tier 1 troubleshooting runbook: [paste content]. Convert this into a structured Role & Behavior document for a Nexthink IT Agent."</div>
+        </div>
+      </div>
+
+      <div class="prompt-card" style="margin-top:0">
+        <div class="plabel">🌟 Generic IT Agent creation prompt</div>
+        <div class="prompt-text" style="padding-right:1rem">I want to create a Nexthink Assist IT Agent specialized in the following domain: [TOPIC].
+The agent is intended for [TARGET AUDIENCE — e.g. DEX Analysts, IT Ops, Support, Security teams, etc.].
+Before starting any analysis or content generation, it must ask scoping questions to clarify the intent, validate symptoms or the area of investigation, and confirm its understanding before proceeding.
+First, generate a Role & Behavior in markdown of approximately 3000 to 5000 characters (hard maximum: 10,000 characters, with a comfortable margin for future adjustments).
+Then propose a numbered list of up to 5 markdown resource files to be created one by one afterwards — for each file, include its number, title, a one-sentence description of its purpose, and the approximate character count of the content that will be generated.</div>
+        <button class="copy-btn" onclick="copyToClipboard(this, this.previousElementSibling.innerText)"><i class="ti ti-copy"></i> Copy</button>
+      </div>
+
+      <p class="sub-label">Worked example — Endpoint Performance & DEX Investigation Agent</p>
+      <p class="section-sub" style="margin-bottom:0.9rem">The generic prompt above, filled in for a real domain — shown here as a concrete illustration of the pattern.</p>
+      <div class="prompt-card" style="margin-top:0">
+        <div class="plabel">Filled-in example</div>
+        <div class="prompt-text" style="padding-right:1rem">I want to create a Nexthink Assist IT Agent specialized in endpoint performance troubleshooting, Digital Employee Experience (DEX) investigations, device health analysis, root-cause identification, and cross-device comparison. The agent must be generic and not tied to any specific Nexthink environment, tenant, customer, device model, operating system configuration, or internal process.
+
+The primary use cases are:
+- Analysis of a specific device.
+- Performance troubleshooting and degradation analysis.
+- DEX investigation and end-user experience assessment.
+- Application stability investigation.
+- Device comparison against peer devices, populations, or reference baselines.
+- Executive-ready investigation reports suitable for customer delivery.
+
+The target audience includes DEX Analysts, Endpoint Engineering teams, EUC teams, IT Operations, Service Desk engineers, Support teams, Technical Account Managers, Customer Success Managers, and Service Delivery Managers.
+
+Before performing any analysis, the agent must validate that sufficient information has been provided. It should proactively ask clarifying and scoping questions whenever needed. At a minimum, it should attempt to identify:
+- Which device should be analyzed.
+- Whether the investigation concerns a specific user, device, application, or performance symptom.
+- A short description of the reported situation.
+- The investigation period.
+- Business impact and user impact.
+- Recent changes, updates, deployments, or remediation actions already performed.
+- Whether comparison with other devices is required.
+- The expected outcome of the investigation.
+
+The agent must not immediately jump into conclusions. It should first confirm its understanding of the request and define the scope of the analysis.
+
+Once sufficient context is available, the agent must systematically produce structured investigations focused on root-cause analysis. Reports should distinguish facts, observations, correlations, hypotheses, findings, and recommendations. The agent must correlate Nexthink signals and metrics including DEX scores, endpoint scores, updates, software changes, CPU utilization, memory utilization, resource consumption, startup performance, logon performance, application crashes, freezes, network health indicators, user experience metrics, and remediation events to identify probable root causes and contributing factors.
+
+The agent must be capable of generating investigation reports using the following standard structure:
+
+- Executive Summary
+- Device & User Context
+- DEX Score Analysis
+- Assessment
+- Performance Assessment
+  - CPU Utilization
+  - Memory Utilization
+  - Startup and Logon Performance
+  - Resource Utilization
+- Application Stability Investigation
+- Stability Summary
+- Findings by Application
+- Correlation Analysis
+- Actions Taken
+- Post-Remediation Observations
+- Assessment
+- System Freeze Analysis
+- System-Wide Impact Analysis
+- Outstanding Issues / Remaining Risks
+- Conclusion
+- Recommendations
+
+The agent should quantify impact whenever possible, identify trends over time, compare findings with peer devices when relevant, assess remediation effectiveness, highlight remaining concerns, explain why issues occurred, and clearly state confidence levels when evidence is incomplete. The communication style should be professional, evidence-based, structured, customer-facing, and suitable for both technical and executive audiences.
+
+Generate:
+1. A complete Role & Behavior section in markdown of approximately 5,000 characters (hard maximum 10,000).
+
+Before generating the next step, confirm that I am ready to proceed. Continue this pattern throughout the process, requesting confirmation before each new section is created.
+
+2. A numbered list of up to 5 markdown resource files to create afterwards, including for each file: title, purpose, key contents, and approximate character count.</div>
+        <button class="copy-btn" onclick="copyToClipboard(this, this.previousElementSibling.innerText)"><i class="ti ti-copy"></i> Copy</button>
+      </div>
+      <div class="tip-box">
+        <p><strong>The next level — build a factory:</strong> once this pattern works, the only two variables to substitute are <code>[TOPIC]</code> and <code>[TARGET AUDIENCE]</code>. Everything else — deliverable structure, size constraint, generation sequence, and resource list format — is already encoded and will consistently produce the same output model, accelerating agent creation at scale while ensuring consistency and governance across all agents.</p>
+      </div>
 
       <p class="sub-label">Contributing guidelines</p>
       <div class="info-item">
@@ -1184,6 +1386,13 @@ const categories = [
         teams: ['Endpoint Engineering','EUC','Workplace Engineering','Security','IT Operations'],
         desc: 'Provides end-to-end visibility into the Windows KB patching lifecycle, helping teams monitor, assess, and optimize monthly Windows update deployments.',
         prompt: "Give me a full patching status overview for this month's Windows KB updates — coverage, gaps, failures, and devices most at risk."
+      },
+      {
+        name: 'Executive Risk & Exposure Intelligence Agent',
+        slug: 'Executive-Risk-&-Exposure-Intelligence-Agent',
+        teams: ['Security','IT Leadership','SecOps','Compliance'],
+        desc: 'Continuously monitors endpoint security posture, fleet health, and DEX to compute a Composite Risk Score and deliver prioritized, audience-appropriate executive risk reporting with remediation playbooks.',
+        prompt: "Give me this week's executive risk report — top Critical findings, affected device counts, and recommended remediation playbooks."
       }
     ]
   },
@@ -1213,6 +1422,13 @@ const categories = [
         teams: ['DEX','Digital Workplace','Workplace Analytics','IT Leadership'],
         desc: 'Analyzes, governs, and optimizes the Nexthink DEX Score — explaining score composition, root causes, threshold governance, benchmarking, and remediation priorities.',
         prompt: 'Why did our DEX score drop this week, and which threshold or population is most responsible?'
+      },
+      {
+        name: 'Nexthink Assist IT Agent Designer',
+        slug: 'Nexthink-Assist-IT-Agent-Designer',
+        teams: ['DEX','Customer Success','Transformation','Workplace Analytics'],
+        desc: 'Designs, writes, and refines other Nexthink Assist IT Agents — producing Role & Behavior documents, knowledge source file sets, live prompts, and scheduled task instructions that respect platform constraints.',
+        prompt: 'Draft the Role & Behavior for a new IT Agent that monitors VPN reliability for remote employees.'
       }
     ]
   },
@@ -1278,6 +1494,20 @@ const categories = [
         teams: ['IT Operations','Endpoint Engineering','EUC','Support'],
         desc: 'Maintains operational hygiene by detecting unhealthy collectors, degraded devices, and technical debt accumulation.',
         prompt: 'Reveal hidden operational hygiene problems degrading long-term endpoint stability.'
+      },
+      {
+        name: 'Digital Experience Root Cause Analyst',
+        slug: 'Digital-Experience-Root-Cause-Analyst',
+        teams: ['IT Operations','DEX','Endpoint Engineering','Support'],
+        desc: 'Produces structured, evidence-backed root cause analysis reports for DEX score degradation, correlating endpoint performance, application stability, and change events with a five-tier confidence framework.',
+        prompt: 'Why did the DEX score drop for the Finance department last week, and what is the root cause?'
+      },
+      {
+        name: 'Printing & PaperCut IT Agent',
+        slug: 'Printing-&-PaperCut-IT-Agent',
+        teams: ['IT Operations','Service Desk','EUC','Support'],
+        desc: 'Guides L1/L2 support agents through structured, evidence-based triage and remediation of Windows Print Spooler and PaperCut client issues, from factualization to escalation.',
+        prompt: "A user can't print and PaperCut isn't popping up — help me triage this device step by step."
       }
     ]
   },
@@ -1453,6 +1683,10 @@ const taskPrompts = [
   { agent: 'Workforce Sentiment Inference Agent', text: 'Identify populations experiencing silent operational fatigue and structural digital frustration by correlating recurring degradations, DEX decline trends, endpoint instability, repeated interruptions, degraded collaboration quality, application instability, and persistent operational friction before support escalation or productivity decline becomes visible.' },
   { agent: 'Monthly Patching Intelligence Agent', text: "Analyze the current monthly Windows KB patching cycle across the managed device estate. Identify total deployment coverage, devices that have not yet received the update, devices where installation failed or is pending restart, and populations with recurring patching failures. Segment results by OS version, device model, location, and business entity. Flag devices with the highest exposure risk based on patch age, criticality, and endpoint health context. Recommend prioritized remediation actions distinguishing quick wins from structural patching hygiene issues. At the start of each analysis, include the date and time and the KB reference for the current month's cumulative update." },
   { agent: 'DEX Intelligence & Governance Agent', text: "Analyze the current DEX Score and its subscores (Technology, Endpoint, Applications, Collaboration, Sentiment) to identify the primary contributors to any degradation since the last review. For each degraded area, drill down to the responsible leaf scores, affected applications, and impacted populations, and quantify the score impact. Benchmark performance across countries, entities, and device populations to surface structural outliers. Evaluate whether current thresholds remain aligned with actual fleet distributions and flag any governance drift or risk of score inflation. Conclude with the top DEX risks, top opportunities, and the highest-impact remediation actions to prioritize. At the start of each analysis, include the date and time." },
+  { agent: 'Digital Experience Root Cause Analyst', text: "Perform a structured root cause investigation for the devices or cohorts showing the largest DEX score degradation over the defined analysis window. Establish the DEX score baseline and identify which subscore drove the largest delta, then correlate endpoint resource utilization, application stability, boot and login performance, and recent change events within the correlation window. Apply the five-tier confidence framework to classify the primary cause, contributing factors, and any alternative hypotheses considered. Clearly state any data gaps and their impact on confidence. Produce the investigation as structured progress updates followed by the final RCA report. At the start of each analysis, include the explicit analysis window as dates." },
+  { agent: 'Executive Risk & Exposure Intelligence Agent', text: "Continuously evaluate active security exposure indicators and fleet health signals across the estate, computing or updating the Composite Risk Score using the defined weights and automatically applying override rules for executive devices and combined Critical patterns. Check for named risk patterns before reporting individual indicators, since certain combinations carry a higher severity than their components taken separately. Select the correct executive reporting template based on the trigger condition and intended audience, translating every technical finding into a business consequence before presenting it. When a finding requires action, recommend the matching remediation playbook and respect the cross-playbook sequencing rules. Declare any missing required configuration explicitly rather than producing silently incomplete output. At the start of each analysis, include the date and time." },
+  { agent: 'Nexthink Assist IT Agent Designer', text: "Review all IT Agent Role & Behavior documents and knowledge source file sets currently in use for platform-constraint violations, capability overreach, scope ambiguity, and retrieval risks in the knowledge source files. Flag any document exceeding the character limits, any design relying on custom fields, custom trends, or external system access, and any scheduled task instruction that references relative time expressions or prior-run state. Classify each finding as blocking, minor, or acceptable, and recommend the specific correction needed. At the start of each review, include the date and time." },
+  { agent: 'Printing & PaperCut IT Agent', text: "Identify devices across the fleet showing Print Spooler crashes, hangs, or stuck queues, and PaperCut client issues such as authentication failures, quota errors, or client connectivity problems, over the past 7 days. For each affected device, confirm whether the Print Spooler service is currently running, the installed PaperCut client version, and any recent application crashes or system events related to printing, and correlate the onset with recent package installs or updates. Distinguish single-user, single-device, and site-wide or server-side patterns, and prioritize devices where an automated remediation such as a Print Spooler reset is available. Summarize findings with the evidence needed for L2 escalation where automated remediation is not applicable. At the start of each analysis, include the date and time." },
 ];
 
 const advancedPrompts = [
@@ -1484,6 +1718,10 @@ const advancedPrompts = [
   { agent: 'Monthly Patching Intelligence Agent', text: "Conduct a comprehensive end-to-end analysis of the current monthly Windows KB patching cycle across the full managed device estate. Begin by identifying the KB reference for this month's cumulative update for each Windows version present in the environment (Windows 10 21H2, 22H2, Windows 11 22H2, 23H2, 24H2, and any others detected). For each OS version, report total devices in scope, devices that have successfully installed the update, devices where installation is pending restart, devices where installation failed, and devices with no installation attempt recorded. Segment all findings by OS version, hardware model, location, organizational unit, and business entity to surface structural patching gaps. Identify devices that have missed two or more consecutive monthly updates and flag them as chronic non-compliant endpoints. For devices with installation failures, correlate with available endpoint signals such as low disk space, unhealthy collectors, stale last-seen dates, pending reboots exceeding 14 days, or known compatibility issues, and classify the most probable failure cause for each population. Cross-reference unpatched devices with endpoint security posture indicators to estimate relative exposure severity. For each identified gap population, recommend a prioritized remediation action specifying the expected operational effort, the team responsible, the follow-up indicator, and whether the action is corrective, preventive, or hygiene-oriented. Conclude with an executive-ready patching scorecard summarizing overall fleet compliance rate, highest-risk populations, top failure drivers, and the recommended immediate actions for the next 72 hours. At the start of the analysis, include the date, time, and the KB references analyzed." },
   { agent: 'DEX Intelligence & Governance Agent', text: "Conduct a comprehensive DEX Score governance and root cause analysis across the organization. Begin with a full score breakdown covering DEX Score, Technology Score, Endpoint Score, Applications Score, Collaboration Score, and Sentiment Score, explicitly explaining the weak-link relationship between parent and child scores rather than treating composites as simple averages. For every degraded score, drill down to the contributing subscores and leaf scores, identify the underlying metrics and technologies responsible, and quantify score impact using affected population size and business criticality. Benchmark results across countries, business entities, departments, hardware models, OS versions, and VDI versus physical populations to surface statistically meaningful outliers rather than noise. Cross-reference Technology Score against Sentiment Score and recent campaign responses to identify perception gaps and hidden frustrations not visible in technical telemetry. Perform a threshold governance review: for each active leaf score threshold, evaluate P50, P90, and P95 fleet distributions, determine whether Good, Average, and Frustrating bands still separate experiences meaningfully, and flag thresholds that have never been revisited or that appear over- or under-sensitive. Never recommend a threshold change solely to raise a score — justify every proposed change with evidence such as the percentage of healthy users currently misclassified. Assess score and sentiment coverage to warn where conclusions may be statistically weak due to missing telemetry or connector gaps. Conclude with an executive summary structured as: DEX Overview, Root Cause Analysis, Impact Analysis, Cohort Comparison, Trend Analysis, Governance Assessment, Recommended Actions, Expected DEX Improvement, and Risks and Considerations." },
   { agent: 'DEX Intelligence & Governance Agent', text: "Before modifying any DEX score threshold, simulate the impact of the proposed change on the current population. For a given metric with a proposed change to the Average or Frustrating range start value, count how many users and devices currently fall into each band (Good, Average, Frustrating) using the current threshold, then count how many would move between bands with the new threshold, including the percentage change. Compute the estimated change in the composite score for the affected population, and the estimated change in the composite and leaf score for the involved branch, with analysis per country. State the Nexthink default threshold for this metric as a reference baseline, and flag that threshold changes are not retroactive — the new threshold applies from the next computation cycle only. Log the proposed change with date, metric, old value, new value, and justification. Present the simulation results and wait for explicit confirmation before applying the change." },
+  { agent: 'Digital Experience Root Cause Analyst', text: "Conduct a complete ten-step root cause investigation for DEX score degradation across the requested scope. Begin by confirming the scope (single device, cohort, department, or organization) and converting any relative time expression into explicit dates. Retrieve the DEX score baseline (overall, Technology, Endpoint, Applications, Collaboration, Sentiment) for the defined window and identify which subscore drove the largest delta; if Sentiment is the primary driver, stop the technical investigation and report that finding alone. Otherwise, inventory the affected population including OS distribution and Collector version range, excluding devices with insufficient data. Query CPU, memory, disk, and network utilization for the affected population, recording P50 and P95 values and flagging threshold breaches. Query application crash and freeze events, classifying severity as Isolated, Recurring, or Severe, and identify the top offending applications. If the Applications subscore is degraded, analyze web application page load times and transaction durations, flagging incomplete transaction ratios above 20%. Query boot duration and login desktop-visible time P50 and P95, correlating timing with the degradation onset without attributing cause without cross-referencing other signals. Query package installs, uninstalls, and OS updates within the correlation window and classify each as Causal, Contributory, Coincidental, or Candidate — never Causal without before/after metric confirmation. Synthesize all signals using the five-tier confidence framework (Confirmed / Probable / Candidate / Coincidental / Insufficient Evidence) to identify the primary cause, contributing factors, and ruled-out alternative hypotheses. Show each investigation step as a structured progress update before delivering the final report, and explicitly state any data gaps and how they affect confidence. Use explicit dates throughout — never relative time expressions — and include units on every numeric value." },
+  { agent: 'Executive Risk & Exposure Intelligence Agent', text: "Produce a comprehensive executive risk and exposure review of the endpoint fleet. Evaluate all active security exposure indicators and fleet health signals, computing the Composite Risk Score per the defined formula and component weights, and automatically applying override rules so that any executive device with a High indicator is escalated to Critical. Before reporting individual findings, check whether indicators combine into a named risk or hardware/stability pattern, since specific combinations carry their own severity override and remediation sequence distinct from their components in isolation. Select the appropriate executive reporting template based on the trigger condition and audience, never mixing a non-technical executive template with an operational deep-dive template, and translate every technical finding into a business consequence with both absolute numbers and trend direction where available. For findings requiring action, select the matching remediation playbook, respect the cross-playbook sequencing matrix (for example, never recommending patch deployment before disk space is resolved), and treat privileged-access findings as human-only with no automated steps proposed. Clearly flag any indicator that relies on non-native data sources such as BitLocker status or CVE-specific mapping, and never present it as confirmed telemetry. Declare explicitly any required configuration item that is missing rather than silently omitting affected findings. Escalate immediately any hardware failure signature, any Critical finding on a C-suite device, any Critical alert that has exceeded its SLA without remediation, or any playbook that has failed twice — providing the indicator or pattern ID, affected device count, first-detected timestamp, and a verification query for the human team. Conclude with a prioritized summary suitable for IT leadership, distinguishing measured risk from data-limited or ambiguous findings." },
+  { agent: 'Nexthink Assist IT Agent Designer', text: "When asked to design a new Nexthink Assist IT Agent, first clarify the single most scope-narrowing piece of missing information with one focused question, then produce a complete Role & Behavior document between 7,000 and 9,500 characters that opens with a clear identity statement, defines the target user, lists what the agent does and does not do, and includes explicit behavioral rules — counting characters, not words, since Markdown formatting counts toward the 10,000-character platform limit. Recommend a companion knowledge source file set of three to five files, one topic per file, each under 10,000 characters and structured for chunk-based retrieval with short sections, descriptive headers, and self-contained content. For any scheduled task instruction, specify the schedule type, an explicit time window using real dates rather than relative expressions, explicit scope, explicit output format, and whether findings require human review, and never reference prior-run state since each execution is isolated. Throughout every design, enforce platform constraints: no custom fields, no custom trends, no external system access beyond the Nexthink platform boundary, no write access framed as anything other than identify, recommend, draft, or generate, and translate all data retrieval intent into natural language rather than invented NQL syntax. When a requested capability conflicts with a platform constraint, state the constraint specifically and offer the closest achievable alternative rather than producing a non-compliant design. When reviewing an existing agent design, identify capability overreach, scope ambiguity, retrieval risk in the knowledge source files, and prompt failure patterns, classifying each as blocking, minor, or acceptable. Close every design deliverable with a reminder to test the agent, prompt, or scheduled task in a live Workspace conversation before wider deployment." },
+  { agent: 'Printing & PaperCut IT Agent', text: "Perform a fleet-wide printing health sweep covering Windows Print Spooler stability, PaperCut MF/NG client health, printer driver issues, and network printer connectivity over the past 7 days. For every affected device, first factualize the issue using device telemetry: confirm whether the Print Spooler service is running, the installed PaperCut client version, any recent application crashes or system events tied to printing, and whether the onset correlates with a recent package install or update. Classify each case by scope — a single-user issue limited to a local queue, driver, or PaperCut client configuration; a single-device issue such as a Spooler crash or driver corruption; or a site-wide or server-side issue such as a PaperCut server outage or unreachable print server — and group findings accordingly rather than reporting every device independently. Wherever an automated remediation is available, such as a Print Spooler reset, propose it ahead of any manual step, and follow the structured triage decision path rather than skipping to a fix. For every case requiring L2 escalation, summarize the device name, OS, PaperCut client version, Spooler status, last crash timestamp, and the steps already attempted, so the escalation is immediately actionable. Stay strictly within printing, print management, and PaperCut scope, and flag anything outside that scope for redirection rather than attempting to answer it. Close with a prioritized list distinguishing recurring structural printing issues from isolated incidents, and recommend the highest-value fleet-wide fix first." },
 ];
 
 const designSections = [
