@@ -139,6 +139,26 @@
     border-radius: 20px;
     position: relative;
   }
+  .hero-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 177, 169, 0.18);
+    color: #6EE7DF;
+    border: 1px solid rgba(0, 177, 169, 0.35);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    position: relative;
+    margin-top: 0.75rem;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .hero-link:hover {
+    background: rgba(0, 177, 169, 0.28);
+    border-color: rgba(0, 177, 169, 0.55);
+  }
 
   /* NAV STRIP */
   .nav-strip {
@@ -734,6 +754,7 @@
     <h1>IT Agents Catalog</h1>
     <p>25+ AI-powered operational assistants to extend, accelerate, and augment your Digital Workplace and IT Operations teams.</p>
     <div class="hero-notice"><i class="ti ti-info-circle"></i> Based on Nexthink Technical Preview capabilities — may evolve over time</div>
+    <div><a class="hero-link" href="https://cgaginnext.github.io/Nexthink-Assist-Playbook/" target="_blank" rel="noopener noreferrer"><i class="ti ti-message-bolt"></i> Explore the Prompt Playbook →</a></div>
   </div>
 
   <nav class="nav-strip" role="navigation" aria-label="Sections">
